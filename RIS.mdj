@@ -1378,7 +1378,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -208,
+											"left": -224,
 											"height": 13
 										},
 										{
@@ -1388,11 +1388,11 @@
 												"$ref": "AAAAAAGHYATqXSQSZFk="
 											},
 											"font": "Arial;13;1",
-											"left": 383.5,
+											"left": 375.5,
 											"top": 571.5,
 											"width": 117,
 											"height": 13,
-											"text": "일반 회원 회원 탈퇴"
+											"text": "회원 탈퇴"
 										},
 										{
 											"_type": "LabelView",
@@ -1402,7 +1402,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -208,
+											"left": -224,
 											"width": 66.244140625,
 											"height": 13,
 											"text": "(from 인증)"
@@ -1415,13 +1415,13 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -208,
+											"left": -224,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 378.5,
+									"left": 370.5,
 									"top": 564.5,
 									"width": 127,
 									"height": 25,
@@ -1449,7 +1449,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -104,
+									"left": -112,
 									"width": 10,
 									"height": 10
 								},
@@ -1464,7 +1464,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -104,
+									"left": -112,
 									"width": 10,
 									"height": 10
 								},
@@ -1479,7 +1479,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -104,
+									"left": -112,
 									"width": 10,
 									"height": 10
 								},
@@ -1494,7 +1494,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -104,
+									"left": -112,
 									"width": 10,
 									"height": 10
 								},
@@ -1509,14 +1509,14 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -104,
+									"left": -112,
 									"width": 10,
 									"height": 10
 								}
 							],
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 352,
+							"left": 344,
 							"top": 560,
 							"width": 180,
 							"height": 35,
@@ -2846,7 +2846,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 331,
+									"left": 328,
 									"top": 634,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -2867,7 +2867,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 337,
+									"left": 334,
 									"top": 648,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -2888,7 +2888,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 318,
+									"left": 315,
 									"top": 607,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -2909,7 +2909,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 382,
+									"left": 375,
 									"top": 613,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -2930,7 +2930,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 385,
+									"left": 378,
 									"top": 626,
 									"height": 13,
 									"alpha": 0.7853981633974483,
@@ -2951,7 +2951,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 375,
+									"left": 368,
 									"top": 586,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -2973,7 +2973,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 280,
-									"top": 657,
+									"top": 655,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -2993,7 +2993,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 288,
-									"top": 668,
+									"top": 667,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -3013,7 +3013,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 265,
-									"top": 633,
+									"top": 632,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -3058,7 +3058,7 @@
 								"$ref": "AAAAAAGHYATqXSQRyc0="
 							},
 							"lineStyle": 1,
-							"points": "400:595;251:660",
+							"points": "393:595;251:659",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGH9nbceQUYMDI="
@@ -3382,7 +3382,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGHX+/+MclWUks="
 					},
-					"name": "일반 회원 회원 탈퇴",
+					"name": "회원 탈퇴",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -3810,7 +3810,7 @@
 									"font": "Arial;13;0",
 									"left": 348.5,
 									"top": 428.5,
-									"width": 96,
+									"width": 97.140625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGHYH6SG4t02xg="
@@ -4208,7 +4208,7 @@
 									"font": "Arial;13;0",
 									"left": 356.5,
 									"top": 804.5,
-									"width": 96,
+									"width": 97.140625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGHYH+yuZFKWT0="
@@ -5593,7 +5593,7 @@
 									"font": "Arial;13;0",
 									"left": 676.5,
 									"top": 948.5,
-									"width": 96,
+									"width": 97.140625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGHZYFIghBQ8hc="
@@ -5787,7 +5787,7 @@
 									"font": "Arial;13;0",
 									"left": 548.5,
 									"top": 788.5,
-									"width": 96,
+									"width": 97.140625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGHZYFjSRG5kcU="
@@ -45318,7 +45318,7 @@
 												"$ref": "AAAAAAGICx8sqyXJW6g="
 											},
 											"font": "Arial;13;0",
-											"left": 48.72998046875,
+											"left": 48.45703125,
 											"top": 21,
 											"width": 53,
 											"height": 13,
@@ -45333,7 +45333,7 @@
 											"font": "Arial;13;1",
 											"left": 29,
 											"top": 21,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -51267,7 +51267,7 @@
 												"$ref": "AAAAAAGICx9EHCwBC8s="
 											},
 											"font": "Arial;13;0",
-											"left": 24.72998046875,
+											"left": 24.45703125,
 											"top": 5,
 											"width": 53,
 											"height": 13,
@@ -51282,7 +51282,7 @@
 											"font": "Arial;13;1",
 											"left": 5,
 											"top": 5,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -55265,7 +55265,7 @@
 												"$ref": "AAAAAAGICx9ZxjD8Cwc="
 											},
 											"font": "Arial;13;0",
-											"left": 24.72998046875,
+											"left": 24.45703125,
 											"top": 53,
 											"width": 40,
 											"height": 13,
@@ -55280,7 +55280,7 @@
 											"font": "Arial;13;1",
 											"left": 5,
 											"top": 53,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -58588,7 +58588,7 @@
 												"$ref": "AAAAAAGICx9u2zU0Pps="
 											},
 											"font": "Arial;13;0",
-											"left": 24.72998046875,
+											"left": 24.45703125,
 											"top": 5,
 											"width": 53,
 											"height": 13,
@@ -58603,7 +58603,7 @@
 											"font": "Arial;13;1",
 											"left": 5,
 											"top": 5,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -64784,7 +64784,7 @@
 												"$ref": "AAAAAAGICyQDdUaox6E="
 											},
 											"font": "Arial;13;0",
-											"left": 48.72998046875,
+											"left": 48.45703125,
 											"top": 101,
 											"width": 27,
 											"height": 13,
@@ -64799,7 +64799,7 @@
 											"font": "Arial;13;1",
 											"left": 29,
 											"top": 101,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
