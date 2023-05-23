@@ -1,101 +1,187 @@
-// Çì´õ ¼±¾ğ
-#include <stdio.h>
-#include <string.h>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <math.h>
 
-// »ó¼ö ¼±¾ğ
-#define MAX_STRING 32
-#define INPUT_FILE_NAME "input.txt"
-#define OUTPUT_FILE_NAME "output.txt"
+using namespace std;
 
-// ÇÔ¼ö ¼±¾ğ
 void doTask();
-void join();
 void program_exit();
-
-// º¯¼ö ¼±¾ğ
-FILE* in_fp, * out_fp;
 
 int main()
 {
-    // ÆÄÀÏ ÀÔÃâ·ÂÀ» À§ÇÑ ÃÊ±âÈ­
-    FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
-    FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
 
-    doTask();
-    return 0;
+  doTask();
+
+  return 0;
 }
-
-
-
-
-
 
 void doTask()
 {
-    // ¸Ş´º ÆÄ½ÌÀ» À§ÇÑ level ±¸ºĞÀ» À§ÇÑ º¯¼ö
-    int menu_level_1 = 0, menu_level_2 = 0;
-    int is_program_exit = 0;
+  char charMenuLevel1, blank, charMenuLevel2;
+  int menuLevel1, menuLevel2;
+  int isProgramExit = 0;
+  string str;
 
-    while (!is_program_exit)
+  ifstream fin("input.txt");
+  ofstream fout("output.txt");
+
+  while (!isProgramExit)
+  {
+    fin >> menuLevel1 >> menuLevel2;
+    switch (menuLevel1)
     {
-        // ÀÔ·ÂÆÄÀÏ¿¡¼­ ¸Ş´º ¼ıÀÚ 2°³¸¦ ÀĞ±â
-        fscanf(in_fp, "%d %d ", &menu_level_1, &menu_level_2);
-
-
-        // ¸Ş´º ±¸ºĞ ¹× ÇØ´ç ¿¬»ê ¼öÇà
-        switch (menu_level_1)
-        {
-        case 1:
-        {
-            switch (menu_level_2)
-            {
-            case 1:   // "1.1. È¸¿ø°¡ÀÔ¡° ¸Ş´º ºÎºĞ
-            {
-                // join() ÇÔ¼ö¿¡¼­ ÇØ´ç ±â´É ¼öÇà 
-                join();
-
-                break;
-            }
-            case 2:
-            {
-                break;
-            }
-            }
-        case 7:
-        {
-            switch (menu_level_2)
-            {
-            case 1:   // "6.1. Á¾·á¡° ¸Ş´º ºÎºĞ
-            {
-                program_exit();
-                is_program_exit = 1;
-                break;;
-            }
-            }
-
-        }
-        }
-        }
+    // 1. íšŒì› ê°€ì…, íƒˆí‡´
+    case 1:
+    {
+      switch (menuLevel2)
+      {
+      // 1.1. íšŒì›ê°€ì…
+      case 1:
+      {
+        SignUp *si = new SignUp();
+        break;
+      }
+      // 1.2. íšŒì›íƒˆí‡´
+      case 2:
+      {
+        Withdraw *wd = new Withdraw(wholeMemberArr, wholeMemberArr[wholeMemIndex]);
+        break;
+      }
+      }
+      break;
     }
-    return;
+    // 2. íšŒì› ê´€ë¦¬ - ë¡œê·¸ì¸, ë¡œê·¸ì•„ì›ƒ
+    case 2:
+    {
+      switch (menuLevel2)
+      {
+      // 2.1. ë¡œê·¸ì¸
+      case 1:
+      {
+        string memberId;
+        string memberPw;
+        fin >> memberId >> memberPw;
+        LogIn *li = new LogIn(wholeMemberArr, memberId, memberPw);
+        break;
+      }
+      // 2.2. ë¡œê·¸ì•„ì›ƒ
+      case 2:
+      {
+        LogOut *lo = new LogOut(wholeMemberArr[wholeMemIndex]);
+        break;
+      }
+      }
+      break;
+    }
+    // 3. ìƒí’ˆ íŒë§¤ ê´€ë¦¬
+    case 3:
+    {
+      switch (menuLevel2)
+      {
+      // 3.1. íŒë§¤ ì˜ë¥˜ ë“±ë¡
+      case 1:
+      {
+        string productName, companyName;
+        int price, salesNum;
+        fin >> productName >> companyName >> price >> salesNum;
+
+        AddProduct *addProduct = new AddProduct(wholeMemberArr, wholeProductArr, productName, companyName, price, salesNum);
+        break;
+      }
+      // 3.2. ë“±ë¡ ìƒí’ˆ ì¡°íšŒ
+      case 2:
+      {
+        SalesProductInquiry *salesProductInquiry = new SalesProductInquiry(wholeMemberArr[wholeMemIndex]);
+        break;
+      }
+      // 3.3. íŒë§¤ ì™„ë£Œ ìƒí’ˆ ì¡°íšŒ
+      case 3:
+      {
+        ViewSoldHistory *viewSoldHistory = new ViewSoldHistory(wholeMemberArr[wholeMemIndex]);
+        break;
+      }
+      }
+      break;
+    }
+    // 4. ìƒí’ˆ êµ¬ë§¤ ê´€ë¦¬
+    case 4:
+    {
+      switch (menuLevel2)
+      {
+      // 4.1. ìƒí’ˆ ì •ë³´ ê²€ìƒ‰
+      case 1:
+      {
+        string productName;
+        fin >> productName;
+
+        SearchProduct *searchProduct = new SearchProduct(wholeProductArr, productName);
+        break;
+      }
+      // 4.2. ìƒí’ˆ êµ¬ë§¤
+      case 2:
+      {
+        PurchaseProduct *purchaseProduct = new PurchaseProduct(wholeMemberArr, wholeProductArr, wholeOrderArr);
+        break;
+      }
+      // 4.3. ìƒí’ˆ êµ¬ë§¤ ë‚´ì—­ ì¡°íšŒ
+      case 3:
+      {
+        ViewPurchaseHistory *viewPurchaseHistory = new ViewPurchaseHistory(wholeMemberArr[wholeMemIndex]);
+        break;
+      }
+      // 4.4. ìƒí’ˆ êµ¬ë§¤ë§Œì¡±ë„ í‰ê°€
+      case 4:
+      {
+        string productName;
+        int purchaseEvaluation;
+        fin >> productName >> purchaseEvaluation;
+        EvaluatePurchase *evaluatePurchase = new EvaluatePurchase(wholeMemberArr[wholeMemIndex], productName, purchaseEvaluation);
+        break;
+      }
+      }
+      break;
+    }
+    // 5. í†µê³„ ë‚´ì—­
+    case 5:
+    {
+      switch (menuLevel2)
+      {
+      // 5.1. íŒë§¤ ìƒí’ˆ í†µê³„
+      case 1:
+      {
+        PrintSalesStatics *printSalesStatics = new PrintSalesStatics(wholeMemberArr[wholeMemIndex]);
+        break;
+      }
+      }
+      break;
+    }
+    // 6. ì¢…ë£Œ
+    case 6:
+    {
+      switch (menuLevel2)
+      {
+      // 6.1. ì¢…ë£Œ
+      case 1:
+      {
+        program_exit();
+        isProgramExit = 1;
+        break;
+      }
+      }
+      break;
+    }
+    }
+  }
+
+  return;
 }
 
+void program_exit()
+{
+  ofstream fout("output.txt", ios::app);
+  fout << "6.1. ì¢…ë£Œ\n";
+  fout.close();
 
-    void join()
-    {
-        char user_type[MAX_STRING], name[MAX_STRING], SSN[MAX_STRING], address[MAX_STRING], ID[MAX_STRING], password[MAX_STRING];
-
-        // ÀÔ·Â Çü½Ä : ÀÌ¸§, ÁÖ¹Î¹øÈ£, ID, Password¸¦ ÆÄÀÏ·ÎºÎÅÍ ÀĞÀ½
-        fscanf(in_fp, "%s %s %s %s", name, SSN, ID, password);
-
-
-        // ÇØ´ç ±â´É ¼öÇà  
-            // Ãâ·Â Çü½Ä
-        fprintf(out_fp, "1.1. È¸¿ø°¡ÀÔ\n");
-        fprintf(out_fp, "%s %s %s %s\n", name, SSN, ID, password);
-    }
-
-
-    void program_exit()
-    {
-    }
+  return;
+}
