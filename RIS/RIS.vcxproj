@@ -139,7 +139,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Entity\Application.cpp" />
+    <ClCompile Include="Entity\ApplicationCollection.cpp" />
+    <ClCompile Include="Entity\CompanyUser.cpp" />
+    <ClCompile Include="Entity\CurrentUser.cpp" />
+    <ClCompile Include="Entity\NormalUser.cpp" />
+    <ClCompile Include="Entity\Rcruitment.cpp" />
+    <ClCompile Include="Entity\RecruitmentCollection.cpp" />
+    <ClCompile Include="Entity\User.cpp" />
+    <ClCompile Include="Entity\UserCollection.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Entity\Application.h" />
+    <ClInclude Include="Entity\ApplicationCollection.h" />
+    <ClInclude Include="Entity\CompanyUser.h" />
+    <ClInclude Include="Entity\CurrentUser.h" />
+    <ClInclude Include="Entity\NormalUser.h" />
+    <ClInclude Include="Entity\Recruitment.h" />
+    <ClInclude Include="Entity\RecruitmentCollection.h" />
+    <ClInclude Include="Entity\User.h" />
+    <ClInclude Include="Entity\UserCollection.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

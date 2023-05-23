@@ -13,10 +13,90 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Authentication">
+      <UniqueIdentifier>{5082c87a-2269-47a3-b3ed-081a0c9e9e68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Recruitment">
+      <UniqueIdentifier>{063bece5-8758-42c5-813e-b15b2b5ded4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Application">
+      <UniqueIdentifier>{600c5915-e9f8-4356-bd38-fb14a391460f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Authentication">
+      <UniqueIdentifier>{ee28304c-0e25-4fa6-9cd1-1ec7b157b78c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Application">
+      <UniqueIdentifier>{635ba768-2df4-49c2-8bec-61ca90134dc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Recruitment">
+      <UniqueIdentifier>{25ac5e12-8d08-4d22-b34f-41b355c1a397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Entity">
+      <UniqueIdentifier>{f5729d6d-dc75-47c0-a2a8-0ce0fe51ba5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Entity">
+      <UniqueIdentifier>{03fcdebb-d181-4e17-8946-635911faffc4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Entity\Application.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\ApplicationCollection.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\CompanyUser.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\CurrentUser.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\NormalUser.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\Rcruitment.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\RecruitmentCollection.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\User.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\UserCollection.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Entity\Application.h">
+      <Filter>헤더 파일\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\ApplicationCollection.h">
+      <Filter>헤더 파일\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\CompanyUser.h">
+      <Filter>헤더 파일\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\CurrentUser.h">
+      <Filter>헤더 파일\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\NormalUser.h">
+      <Filter>헤더 파일\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\Recruitment.h">
+      <Filter>헤더 파일\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\RecruitmentCollection.h">
+      <Filter>헤더 파일\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\User.h">
+      <Filter>헤더 파일\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\UserCollection.h">
+      <Filter>헤더 파일\Entity</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
