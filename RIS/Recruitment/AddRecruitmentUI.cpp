@@ -15,8 +15,8 @@ void AddRecruitmentUI::addNewRecruitment(ifstream *fin, ofstream *fout)
   *fin >> newJob >> newNumberOfHires >> newDeadline;
   this->control->addNewRecruitment(newJob, newNumberOfHires, newDeadline);
 
-  *fout << "3.1. 채용 정보 등록" << "\n";
-  *fout << "> [" << newJob << "] [" << newNumberOfHires << "] [" << newDeadline << "]" << endl << endl;
+  *fout << "3.1. 채용 정보 등록" << endl;
+  *fout << "> " << newJob << " " << newNumberOfHires << " " << newDeadline << endl << endl;
 
   return;
 }
