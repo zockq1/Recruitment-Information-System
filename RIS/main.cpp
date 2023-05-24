@@ -2,6 +2,10 @@
 #include <fstream>
 #include <string>
 #include <math.h>
+#include "./Recruitment/AddRecruitment.h"
+#include "./Recruitment/AddRecruitmentUI.h"
+#include "./Recruitment/RecruitmentInformation.h"
+#include "./Recruitment/RecruitmentInformationUI.h"
 
 using namespace std;
 
@@ -39,13 +43,23 @@ void doTask()
       // 1.1. 회원가입
       case 1:
       {
-        SignUp *si = new SignUp();
+        int userType;
+        fin >> userType;
+        SignUp *control = new SignUp();
+        SignUpUI *boundary = new SiginUpUI(control);
+        if(userType == 1) { 
+          boundary->signUpNormalUser();
+        } else {
+          boundary->signUpCompanyUser();
+        }
         break;
       }
       // 1.2. 회원탈퇴
       case 2:
       {
-        Withdraw *wd = new Withdraw(wholeMemberArr, wholeMemberArr[wholeMemIndex]);
+        SignOut *control = new SignOut();
+        SignOutUI *boundary = new SignOut(control);
+        boundary->deleteAccount();
         break;
       }
       }
@@ -59,95 +73,92 @@ void doTask()
       // 2.1. 로그인
       case 1:
       {
-        string memberId;
-        string memberPw;
-        fin >> memberId >> memberPw;
-        LogIn *li = new LogIn(wholeMemberArr, memberId, memberPw);
+        LogIn *control = new LogIn();
+        LogInUI *boundary = new LogIn(control);
+        boundary->login();
         break;
       }
       // 2.2. 로그아웃
       case 2:
       {
-        LogOut *lo = new LogOut(wholeMemberArr[wholeMemIndex]);
+        LogOut *control = new LogOut();
+        LogOutUI *boundary = new LogOut(control);
+        boundary->logout();
         break;
       }
       }
       break;
     }
-    // 3. 상품 판매 관리
+    // 3. 채용 정보 관리
     case 3:
     {
       switch (menuLevel2)
       {
-      // 3.1. 판매 의류 등록
+      // 3.1. 채용 정보 등록
       case 1:
       {
-        string productName, companyName;
-        int price, salesNum;
-        fin >> productName >> companyName >> price >> salesNum;
-
-        AddProduct *addProduct = new AddProduct(wholeMemberArr, wholeProductArr, productName, companyName, price, salesNum);
+        AddRecruitment *control = new AddRecruitment();
+        AddRecruitmentUI *boundary = new AddRecruitmentUI(control);
+        boundary->addNewRecruitment(&fin, &fout);
         break;
       }
-      // 3.2. 등록 상품 조회
+      // 3.2. 등록된 채용 정보 조회
       case 2:
       {
-        SalesProductInquiry *salesProductInquiry = new SalesProductInquiry(wholeMemberArr[wholeMemIndex]);
-        break;
-      }
-      // 3.3. 판매 완료 상품 조회
-      case 3:
-      {
-        ViewSoldHistory *viewSoldHistory = new ViewSoldHistory(wholeMemberArr[wholeMemIndex]);
+        RecruitmentInformation *control = new RecruitmentInformation();
+        RecruitmentInformationUI *boundary = new RecruitmentInformationUI(control);
+        boundary->showRecruitmentList(&fout);
         break;
       }
       }
       break;
     }
-    // 4. 상품 구매 관리
+    // 4. 지원
     case 4:
     {
       switch (menuLevel2)
       {
-      // 4.1. 상품 정보 검색
+      // 4.1. 채용 정보 검색
       case 1:
       {
-        string productName;
-        fin >> productName;
-
-        SearchProduct *searchProduct = new SearchProduct(wholeProductArr, productName);
+        SearchRecruitment *control = SearchRecruitment();
+        SearchRecruitmentUI *boundary = SearchRecruitmentUI(control);
+        boundary->searchByCompanyName();
         break;
       }
-      // 4.2. 상품 구매
+      // 4.2. 채용 지원
       case 2:
       {
-        PurchaseProduct *purchaseProduct = new PurchaseProduct(wholeMemberArr, wholeProductArr, wholeOrderArr);
+        Apply *control = Apply();
+        ApplyUI *boundary = ApplyUI(control);
+        boundary->apply();
         break;
       }
-      // 4.3. 상품 구매 내역 조회
+      // 4.3. 지원 정보 조회
       case 3:
       {
-        ViewPurchaseHistory *viewPurchaseHistory = new ViewPurchaseHistory(wholeMemberArr[wholeMemIndex]);
+        ApplicationInformationList *control = ApplicationInformationList();
+        ApplicationInformationListUI *boundary = ApplicationInformationListUI(control);
+        boundary->showApplicationList();
         break;
       }
-      // 4.4. 상품 구매만족도 평가
+      // 4.4. 지원 취소
       case 4:
       {
-        string productName;
-        int purchaseEvaluation;
-        fin >> productName >> purchaseEvaluation;
-        EvaluatePurchase *evaluatePurchase = new EvaluatePurchase(wholeMemberArr[wholeMemIndex], productName, purchaseEvaluation);
+        CancleApply *control = CancleApply();
+        CancleApplyUI *boundary = CancleApply(control);
+        boundary->cancleApplication();
         break;
       }
       }
       break;
     }
-    // 5. 통계 내역
+    // 5. 통계
     case 5:
     {
       switch (menuLevel2)
       {
-      // 5.1. 판매 상품 통계
+      // 5.1. 지원 정보 통계
       case 1:
       {
         PrintSalesStatics *printSalesStatics = new PrintSalesStatics(wholeMemberArr[wholeMemIndex]);
