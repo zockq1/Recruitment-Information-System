@@ -1,5 +1,6 @@
 #pragma once
 #include "User.h"
+#include "RecruitmentCollection.h"
 
 
 class CompanyUser : public User
@@ -11,7 +12,7 @@ private:
 
 public:
   CompanyUser();
-  void addNewRecruitment(string companyName, string job, int numberOgHires, string deadline, string businessNumber);
+  void addNewRecruitment(string job, int numberOgHires, string deadline);
   RecruitmentCollection *getOwnedRecruitmentCollection();
 };
 
