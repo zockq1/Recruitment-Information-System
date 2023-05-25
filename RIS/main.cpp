@@ -2,10 +2,26 @@
 #include <fstream>
 #include <string>
 #include <math.h>
-#include "./Recruitment/AddRecruitment.h"
-#include "./Recruitment/AddRecruitmentUI.h"
-#include "./Recruitment/RecruitmentInformation.h"
-#include "./Recruitment/RecruitmentInformationUI.h"
+#include "SignUp.h"
+#include "SignUpUI.h"
+#include "SignOut.h"
+#include "SignOutUI.h"
+#include "Login.h"
+#include "LoginUI.h"
+#include "LogOut.h"
+#include "LogOutUI.h"
+#include "AddRecruitment.h"
+#include "AddRecruitmentUI.h"
+#include "RecruitmentInformation.h"
+#include "RecruitmentInformationUI.h"
+#include "SearchRecruitment.h"
+#include "SearchRecruitmentUI.h"
+#include "Apply.h"
+#include "ApplyUI.h"
+#include "ApplicationInformationList.h"
+#include "ApplicationInformationListUI.h"
+
+
 
 using namespace std;
 
@@ -46,11 +62,11 @@ void doTask()
         int userType;
         fin >> userType;
         SignUp *control = new SignUp();
-        SignUpUI *boundary = new SiginUpUI(control);
+        SignUpUI *boundary = new SignUpUI(control);
         if(userType == 1) { 
-          boundary->signUpNormalUser();
+          boundary->signUpNormalUser(&fin, &fout);
         } else {
-          boundary->signUpCompanyUser();
+          boundary->signUpCompanyUser(&fin, &fout);
         }
         break;
       }
@@ -58,8 +74,8 @@ void doTask()
       case 2:
       {
         SignOut *control = new SignOut();
-        SignOutUI *boundary = new SignOut(control);
-        boundary->deleteAccount();
+        SignOutUI *boundary = new SignOutUI(control);
+        boundary->deleteAccount(&fout);
         break;
       }
       }
@@ -73,17 +89,17 @@ void doTask()
       // 2.1. 로그인
       case 1:
       {
-        LogIn *control = new LogIn();
-        LogInUI *boundary = new LogIn(control);
-        boundary->login();
+        Login *control = new Login();
+        LoginUI *boundary = new LoginUI(control);
+        boundary->loginSubmit(&fin, &fout);
         break;
       }
       // 2.2. 로그아웃
       case 2:
       {
         LogOut *control = new LogOut();
-        LogOutUI *boundary = new LogOut(control);
-        boundary->logout();
+        LogOutUI *boundary = new LogOutUI(control);
+        boundary->logoutSubmit(&fout);
         break;
       }
       }
@@ -121,47 +137,25 @@ void doTask()
       // 4.1. 채용 정보 검색
       case 1:
       {
-        SearchRecruitment *control = SearchRecruitment();
-        SearchRecruitmentUI *boundary = SearchRecruitmentUI(control);
-        boundary->searchByCompanyName();
+        SearchRecruitment *control = new SearchRecruitment();
+        SearchRecruitmentUI *boundary = new SearchRecruitmentUI(control);
+        boundary->search(&fin, &fout);
         break;
       }
       // 4.2. 채용 지원
       case 2:
       {
-        Apply *control = Apply();
-        ApplyUI *boundary = ApplyUI(control);
-        boundary->apply();
+        Apply *control = new Apply();
+        ApplyUI *boundary = new ApplyUI(control);
+        boundary->apply(&fin, &fout);
         break;
       }
       // 4.3. 지원 정보 조회
       case 3:
       {
-        ApplicationInformationList *control = ApplicationInformationList();
-        ApplicationInformationListUI *boundary = ApplicationInformationListUI(control);
-        boundary->showApplicationList();
-        break;
-      }
-      // 4.4. 지원 취소
-      case 4:
-      {
-        CancleApply *control = CancleApply();
-        CancleApplyUI *boundary = CancleApply(control);
-        boundary->cancleApplication();
-        break;
-      }
-      }
-      break;
-    }
-    // 5. 통계
-    case 5:
-    {
-      switch (menuLevel2)
-      {
-      // 5.1. 지원 정보 통계
-      case 1:
-      {
-        PrintSalesStatics *printSalesStatics = new PrintSalesStatics(wholeMemberArr[wholeMemIndex]);
+        ApplicationInformationList *control = new ApplicationInformationList();
+        ApplicationInformationListUI *boundary = new ApplicationInformationListUI(control);
+        boundary->showApplicationList(&fout);
         break;
       }
       }
