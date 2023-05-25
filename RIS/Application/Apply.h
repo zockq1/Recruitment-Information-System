@@ -6,7 +6,6 @@ using namespace std;
 
 class Apply {
 private:
-	//member variables;
 public:
-	void addApplicant(int businessNumber);
+	string addApplicant(string businessNumber);
 };
