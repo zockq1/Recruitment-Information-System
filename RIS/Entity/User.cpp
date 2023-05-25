@@ -31,7 +31,3 @@ void User::setCollection(){
 RecruitmentCollection *User::getOwnedRecruitmentCollection(){
   return this->ownedRecruitmentCollection;
 }
-
-void User::addNewRecruitment(Recruitment *recruitment){
-    this->getOwnedRecruitmentCollection()->addRecruitment(recruitment);
-}

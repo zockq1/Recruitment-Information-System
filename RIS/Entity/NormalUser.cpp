@@ -22,3 +22,8 @@ string NormalUser::getName(){
 
 void NormalUser::addNewRecruitment(string job, int numberOfHires, string deadline){
 }
+
+
+void NormalUser::addNewRecruitment(Recruitment *recruitment){
+    this->getOwnedRecruitmentCollection()->addRecruitment(recruitment);
+}
