@@ -14,7 +14,7 @@ string SignOut::deleteAccount()
    User *me = currentUser->getCurrentUser();
    string id = me->getId();
    currentUser->deleteCurrentUser();
-   userCollection->deleteAccount();
+   userCollection->deleteAccount(me);
    return id;
 
 }
