@@ -12,7 +12,7 @@ private:
 
 public:
   CompanyUser();
-  void addNewRecruitment(string job, int numberOgHires, string deadline);
+  void addNewRecruitment(string job, int numberOfHires, string deadline);
   RecruitmentCollection *getOwnedRecruitmentCollection();
 };
 

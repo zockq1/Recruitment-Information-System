@@ -6,11 +6,11 @@
 class CurrentUser
 {
 private:
-  User me;
+  User *me;
 public:
   CurrentUser();
   void login();
-  User getCurrentUser();
+  User *getCurrentUser();
   void deleteCurrentUser();
 };
 
