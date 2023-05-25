@@ -11,6 +11,12 @@ private:
   string id;
   string password;
   UserType userType;
+
+protected:
+  void setId(string id);
+  void setPassword(string password);
+  void setUserType(UserType userType);
+  
 public:
   string getId();
   string getPassword();
