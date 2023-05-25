@@ -24,6 +24,8 @@ public:
   string getPassword();
   UserType getUserType();
   RecruitmentCollection *getOwnedRecruitmentCollection();
+  void addNewRecruitment(Recruitment* recruitment);
+  virtual void addNewRecruitment(string job, int numberOfHires, string deadline)=0;
   virtual string getNumber() = 0;
   virtual string getName() = 0;
 };

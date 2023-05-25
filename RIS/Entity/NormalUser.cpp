@@ -9,9 +9,7 @@ NormalUser::NormalUser(string name, string registrationNumber, string id, string
     this->setCollection();
 }
 
-void NormalUser::addNewRecruitment(Recruitment *recruitment){
-    this->getOwnedRecruitmentCollection()->addRecruitment(recruitment);
-}
+
 
 
 string NormalUser::getNumber(){
@@ -20,4 +18,7 @@ string NormalUser::getNumber(){
 
 string NormalUser::getName(){
     return this->name;
+}
+
+void NormalUser::addNewRecruitment(string job, int numberOfHires, string deadline){
 }
