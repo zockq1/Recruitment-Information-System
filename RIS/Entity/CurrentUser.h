@@ -9,7 +9,7 @@ private:
   User *me;
 public:
   CurrentUser();
-  void login();
+  void login(User *me);
   User *getCurrentUser();
   void deleteCurrentUser();
 };
