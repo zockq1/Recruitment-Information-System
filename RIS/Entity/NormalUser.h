@@ -10,8 +10,7 @@ private:
   ApplicationCollection *ownedApplicationCollection;
 
 public:
-  NormalUser();
-  void addNewApplication(string companyName, string job, int numberOfHires, string deadline);
+  NormalUser(string name, string registrationNumber,string ID, string password, UserType userType);
+  void addNewApplication(string companyName, string businessNumber, string job, int numberOfHires, string deadline);
   ApplicationCollection *getOwnedApplicationCollection();
 };
-
