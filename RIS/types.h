@@ -4,17 +4,18 @@ using namespace std;
 
 typedef struct RecruitmentInfo {
   string companyName;
-  string job;
-  string deadline;
-  int numberOfHires;
   string businessNumber;
+  string job;
+  int numberOfHires;
+  string deadline;
 } RecruitmentInfo;
 
 typedef struct ApplicationInfo {
   string companyName;
+  string businessNumber;
   string job;
-  string deadline;
   int numberOfHires;
+  string deadline;
 } ApplicationInfo;
 
 
