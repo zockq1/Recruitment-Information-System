@@ -12,5 +12,5 @@ public:
   void signUpCompanylUser(string inputCompanyName, string inputBusinessNumber, string inputId, string inputPassword);
   void deleteAccount();
   User findByBusinessNumber(string businessNumber);
-  User findByCompanyName(string companyName)
+  User findByCompanyName(string companyName);
 };
