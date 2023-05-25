@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 #include <fstream>
 #include "ApplicationInformationList.h"
@@ -7,6 +7,8 @@
 #include "../Entity/UserCollection.h"
 #include "../Entity/ApplicationCollection.h"
 #include "../Entity/Application.h"
+#include "../Entity/NormalUser.h"
+#include "../types.h"
 
 extern CurrentUser* currentUser;
 extern UserCollection* userCollection;
@@ -27,17 +29,16 @@ void ApplicationInformationListUI::showApplicationList(ofstream *fout)
 
 string ApplicationInformationList::showApplicationList()
 {
- 	User *nUser = currentUser->getCurrentUser();
-    ApplicationCollection *appCollection = nUser->getOwnedCollection();
+ 	NormalUser *nUser = (NormalUser*)(currentUser->getCurrentUser());
+    ApplicationCollection *appCollection = nUser->getOwnedApplicationCollection();
 	
-    Application **ownedApp = appCollection->getOwnedApplication();
-    int appCount = appCollection->getCount();
+    list<Application*> ownedApp = appCollection->getOwnedApplication();
 
     string output;
 
-    for(int i=0; i<appCount; i++)
-        ApplicationInfo info = ownedApp[i]->getInfo();
-        output += "> " + info.companyName + " " + info.businessNumber + " " + info.job + " " + info.numberOfHires + " " + info.deadline + "\n";
-
+    for (auto it = ownedApp.begin(); it != ownedApp.end(); ++it) {
+        ApplicationInfo info = (*it)->getInfo();
+        output += "> " + info.companyName + " " + info.businessNumber + " " + info.job + " " + to_string(info.numberOfHires) + " " + info.deadline + "\n";
+    }
     return output;
 }

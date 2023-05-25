@@ -11,3 +11,15 @@ string User::getPassword(){
 UserType User::getUserType(){
   return this->userType;
 }
+
+void User::setId(string id) {
+	this->id = id;
+}
+
+void User::setPassword(string password) {
+	this->password = password;
+}
+
+void User::setUserType(UserType userType) {
+	this->userType = userType;
+}

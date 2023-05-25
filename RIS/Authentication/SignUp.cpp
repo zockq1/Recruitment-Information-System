@@ -2,7 +2,7 @@
 #include <string>
 #include "SignUp.h"
 #include "SignUpUI.h"
-#include "UserCollection.h"
+#include "../Entity/UserCollection.h"
 using namespace std;
 
 extern UserCollection *userCollection;

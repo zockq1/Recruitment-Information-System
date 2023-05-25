@@ -2,8 +2,8 @@
 #include <string>
 #include "Login.h"
 #include "LoginUI.h"
-#include "UserCollection.h"
-#include "CurrentUser.h"
+#include "../Entity/UserCollection.h"
+#include "../Entity/CurrentUser.h"
 using namespace std;
 
 extern UserCollection *userCollection;

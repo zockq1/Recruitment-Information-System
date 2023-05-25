@@ -1,5 +1,9 @@
 #include "ApplicationCollection.h"
 
+ApplicationCollection::ApplicationCollection() {
+	this->ownedApplication = {};
+}
+
 list<Application*> ApplicationCollection::getOwnedApplication(){
   return this->ownedApplication;
 }

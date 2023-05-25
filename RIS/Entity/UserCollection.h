@@ -19,6 +19,6 @@ public:
   User *findByCredential(string id, string password);
 };
 
-extern UserCollection* userCollection;
+static UserCollection* userCollection = new UserCollection();
 
 #endif

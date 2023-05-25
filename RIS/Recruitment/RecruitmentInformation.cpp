@@ -1,6 +1,6 @@
 #include "RecruitmentInformation.h"
-#include "CompanyUser.h"
-#include "CurrentUser.h"
+#include "../Entity/CompanyUser.h"
+#include "../Entity/CurrentUser.h"
 
 extern CurrentUser* currentUser;
 

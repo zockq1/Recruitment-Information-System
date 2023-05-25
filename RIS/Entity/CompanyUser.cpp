@@ -11,7 +11,8 @@ CompanyUser::CompanyUser(string companyName, string businessNumber, string id, s
 }
 
 void CompanyUser::addNewRecruitment(string job, int numberOfHires, string deadline){
-    this->ownedRecruitmentCollection->addRecruitment(companyName, businessNumber, job, numberOfHires, deadline);
+
+    this->ownedRecruitmentCollection->addRecruitment(this->companyName, this->businessNumber, job, numberOfHires, deadline);
 }
 
 RecruitmentCollection *CompanyUser::getOwnedRecruitmentCollection(){

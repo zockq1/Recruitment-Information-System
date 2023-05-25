@@ -1,15 +1,15 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 #include <fstream>
 #include "Apply.h"
 #include "ApplyUI.h"
-#include "types.h"
-#include "RecruitmentCollection.h"
-#include "CompanyUser.h"
-#include "CurrentUser.h"
-#include "UserCollection.h"
-#include "Recruitment.h"
-#include "NormalUser.h"
+#include "../types.h"
+#include "../Entity/RecruitmentCollection.h"
+#include "../Entity/CompanyUser.h"
+#include "../Entity/CurrentUser.h"
+#include "../Entity/UserCollection.h"
+#include "../Entity/Recruitment.h"
+#include "../Entity/NormalUser.h"
 extern CurrentUser* currentUser;
 extern UserCollection* userCollection;
 
@@ -35,8 +35,6 @@ string Apply::addApplicant(string businessNumber)
 	CompanyUser *cUser = (CompanyUser*)(userCollection->findByBusinessNumber(businessNumber)); //전역
 	RecruitmentCollection *rcollection = cUser->getOwnedRecruitmentCollection();
 	list<Recruitment*> rcruit = rcollection->getOwnedRecruitment();
-
-	int count = rcruit.size();
   
   	RecruitmentInfo info;
 	for (auto it = rcruit.begin(); it != rcruit.end(); ++it)

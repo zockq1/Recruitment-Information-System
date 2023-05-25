@@ -19,7 +19,7 @@ typedef struct ApplicationInfo {
 } ApplicationInfo;
 
 
-enum UserType {
+enum class UserType {
   COMPANY_USER,
-  NORMAL_USER
+  NORMAL_USER,
 };

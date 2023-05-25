@@ -1,4 +1,4 @@
-#include <fstream>
+﻿#include <fstream>
 #include "SearchRecruitment.h"
 #include "SearchRecruitmentUI.h"
 
@@ -13,7 +13,7 @@ void SearchRecruitmentUI::search(ifstream *fin, ofstream *fout)
   *fin >> companyName;
   string output = this->control->search(companyName);
 
-  *fout << "4.1. 채용 정보 검색" << endl;
+  *fout << "4.1 채용 정보 검색" << endl;
   *fout << output << endl;
 
   return;

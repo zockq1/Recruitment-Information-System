@@ -1,15 +1,17 @@
 #include "UserCollection.h"
 #include "NormalUser.h"
 #include "CompanyUser.h"
-#include "types.h"
+#include "../types.h"
 
 void UserCollection::signUpNormalUser(string inputName, string inputRegistrationNumber, string inputId, string inputPassword){
-    NormalUser *nUser = new NormalUser(inputName, inputRegistrationNumber, inputId, inputPassword, NORMAL_USER);
+    UserType userType = UserType::NORMAL_USER;
+    NormalUser *nUser = new NormalUser(inputName, inputRegistrationNumber, inputId, inputPassword, userType);
     users.push_back(nUser);
 }
 
 void UserCollection::signUpCompanylUser(string inputCompanyName, string inputBusinessNumber, string inputId, string inputPassword){
-    CompanyUser *cUser = new CompanyUser(inputCompanyName, inputBusinessNumber, inputId, inputPassword, NORMAL_USER);
+    UserType userType = UserType::COMPANY_USER;
+    CompanyUser *cUser = new CompanyUser(inputCompanyName, inputBusinessNumber, inputId, inputPassword, userType);
     users.push_back(cUser);
 }
 
@@ -23,7 +25,6 @@ void UserCollection::deleteAccount(User *me){
 }
 
 User *UserCollection::findByBusinessNumber(string businessNumber){
-    int count = (this->users).size();
     for(auto it = this->users.begin(); it != this->users.end(); it++)
     {
         if(((CompanyUser*)(*it))->getBusinessNumber() == businessNumber)

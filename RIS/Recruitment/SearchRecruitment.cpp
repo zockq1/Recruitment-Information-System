@@ -1,8 +1,8 @@
 #include "SearchRecruitment.h"
-#include "UserCollection.h"
-#include "CompanyUser.h"
+#include "../Entity/UserCollection.h"
+#include "../Entity/CompanyUser.h"
 
-extern UserCollection *userCollection;
+extern UserCollection* userCollection;
 
 string SearchRecruitment::search(string companyName)
 {

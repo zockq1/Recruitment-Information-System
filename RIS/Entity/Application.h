@@ -1,5 +1,6 @@
+#pragma once
 #include <string>
-#include "types.h"
+#include "../types.h"
 using namespace std;
 
 

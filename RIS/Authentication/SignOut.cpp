@@ -2,8 +2,8 @@
 #include <string>
 #include "SignOut.h"
 #include "SignOutUI.h"
-#include "CurrentUser.h"
-#include "UserCollection.h"
+#include "../Entity/CurrentUser.h"
+#include "../Entity/UserCollection.h"
 using namespace std;
 
 extern CurrentUser *currentUser;

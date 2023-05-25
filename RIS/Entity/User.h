@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "types.h"
+#include "../types.h"
 #include "ApplicationCollection.h"
 using namespace std;
 

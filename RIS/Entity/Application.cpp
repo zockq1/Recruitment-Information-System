@@ -1,5 +1,5 @@
 #include "Application.h"
-#include "types.h"
+#include "../types.h"
 
 Application::Application(string companyName, string businessNumber, string job, int numberOfHires, string deadline) {
   this->companyName = companyName;

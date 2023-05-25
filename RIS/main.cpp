@@ -1,25 +1,25 @@
-#include <iostream>
+﻿#include <iostream>
 #include <fstream>
 #include <string>
 #include <math.h>
-#include "SignUp.h"
-#include "SignUpUI.h"
-#include "SignOut.h"
-#include "SignOutUI.h"
-#include "Login.h"
-#include "LoginUI.h"
-#include "LogOut.h"
-#include "LogOutUI.h"
-#include "AddRecruitment.h"
-#include "AddRecruitmentUI.h"
-#include "RecruitmentInformation.h"
-#include "RecruitmentInformationUI.h"
-#include "SearchRecruitment.h"
-#include "SearchRecruitmentUI.h"
-#include "Apply.h"
-#include "ApplyUI.h"
-#include "ApplicationInformationList.h"
-#include "ApplicationInformationListUI.h"
+#include "./Authentication/SignUp.h"
+#include "./Authentication/SignUpUI.h"
+#include "./Authentication/SignOut.h"
+#include "./Authentication/SignOutUI.h"
+#include "./Authentication/Login.h"
+#include "./Authentication/LoginUI.h"
+#include "./Authentication/LogOut.h"
+#include "./Authentication/LogOutUI.h"
+#include "./Recruitment/AddRecruitment.h"
+#include "./Recruitment/AddRecruitmentUI.h"
+#include "./Recruitment/RecruitmentInformation.h"
+#include "./Recruitment/RecruitmentInformationUI.h"
+#include "./Recruitment/SearchRecruitment.h"
+#include "./Recruitment/SearchRecruitmentUI.h"
+#include "./Application/Apply.h"
+#include "./Application/ApplyUI.h"
+#include "./Application/ApplicationInformationList.h"
+#include "./Application/ApplicationInformationListUI.h"
 
 
 
@@ -43,6 +43,7 @@ void doTask()
   int isProgramExit = 0;
   string str;
 
+  locale::global(locale("Korean"));
   ifstream fin("input.txt");
   ofstream fout("output.txt");
 
