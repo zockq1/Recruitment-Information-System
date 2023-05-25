@@ -11,7 +11,7 @@ private:
 
 public:
   NormalUser();
-  void addNewApplication(string companyName, string job, int numberOfHires, string deadline);
+  void addNewApplication(string companyName, string businessNumber, string job, int numberOfHires, string deadline);
   ApplicationCollection *getOwnedApplicationCollection();
 };
 
