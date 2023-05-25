@@ -6,11 +6,13 @@ class Recruitment
 {
 private:
   string companyName;
-  string job;
-  string deadline;
-  int numberOfHires;
   string businessNumber;
+  string job;
+  int numberOfHires;
+  string deadline;
+  
+  
 public:
-  Recruitment(/* args */);
+  Recruitment(string companyName, string businessNumber, string job, int numberOfHires, string deadline);
   RecruitmentInfo getInfo();
 };

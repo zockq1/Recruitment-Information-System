@@ -1,7 +1,7 @@
 #include "Recruitment.h"
 #include "types.h"
 
-Recruitment::Recruitment(string companyName, string job, string deadline, int numberOfHires, string businessNumber) {
+Recruitment::Recruitment(string companyName, string businessNumber, string job, int numberOfHires, string deadline) {
   this->companyName = companyName;
   this->job = job;
   this->deadline = deadline;
@@ -10,5 +10,6 @@ Recruitment::Recruitment(string companyName, string job, string deadline, int nu
 }
 
 RecruitmentInfo Recruitment::getInfo() {
-  RecruitmentInfo output = {this->companyName, this->job, this->deadline, this->numberOfHires, this->businessNumber};
+  RecruitmentInfo info = {this->companyName, this->job, this->deadline, this->numberOfHires, this->businessNumber};
+  return info;
 }
