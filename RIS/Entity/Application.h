@@ -7,11 +7,12 @@ class Application
 {
 private:
   string companyName;
+  string businessNumber;
   string job;
-  string deadline;
   int numberOfHires;
+  string deadline;
 public:
-  Application();
+  Application(string companyName, string businessNumber, string job, int numberOfHires, string deadline);
   ApplicationInfo getInfo();
 };
 
