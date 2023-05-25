@@ -9,6 +9,6 @@ private:
 public:
   ApplicationCollection();
   list<Application*> getOwnedApplication();
-  void addApplication(string companyName, string job, int numberOfHires, string deadline);
+  void addApplication(string companyName, string businessNumber, string job, int numberOfHires, string deadline);
 };
 
