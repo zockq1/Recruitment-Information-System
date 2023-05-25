@@ -9,6 +9,6 @@ private:
 public:
   RecruitmentCollection();
   list<Recruitment*> getOwnedRecruitment();
-  void addRecruitment(string companyName, string job, int numberOfHires, string deadline, string businessNumber);
+  void addRecruitment(string companyName, string businessNumber, string job, int numberOfHires, string deadline);
 };
 
