@@ -2,20 +2,20 @@
 #include <string>
 #include "SignOut.h"
 #include "SignOutUI.h"
+#include "CurrentUser.h"
+#include "UserCollection.h"
 using namespace std;
-#pragma once
 
-SignOutUI::SignOutUI(SignOut *control)
+extern CurrentUser *currentUser;
+extern UserCollection *userCollection;
+
+string SignOut::deleteAccount()
 {
-    this->control=control;
+   User *me = currentUser->getCurrentUser();
+   string id = me->getId();
+   currentUser->deleteCurrentUser();
+   userCollection->deleteAccount();
+   return id;
+
 }
 
-void SignOutUI::deleteAccount(ofstream *fout)
-{   
-    string id = this->control->deleteAccount();
-
-    *fout << "1.2. 회원탈퇴" << endl;
-    *fout << "> " << id ;
-
-    return;
-}
