@@ -139,18 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Entity\Application.cpp" />
-    <ClCompile Include="Entity\ApplicationCollection.cpp" />
-    <ClCompile Include="Entity\CompanyUser.cpp" />
-    <ClCompile Include="Entity\CurrentUser.cpp" />
-    <ClCompile Include="Entity\NormalUser.cpp" />
-    <ClCompile Include="Entity\Rcruitment.cpp" />
-    <ClCompile Include="Entity\RecruitmentCollection.cpp" />
-    <ClCompile Include="Entity\User.cpp" />
-    <ClCompile Include="Entity\UserCollection.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="Application\ApplicationInformationList.h" />
+    <ClInclude Include="Application\ApplicationInformationListUI.h" />
+    <ClInclude Include="Application\Apply.h" />
+    <ClInclude Include="Application\ApplyUI.h" />
+    <ClInclude Include="Authentication\Login.h" />
+    <ClInclude Include="Authentication\LoginUI.h" />
+    <ClInclude Include="Authentication\LogOut.h" />
+    <ClInclude Include="Authentication\LogOutUI.h" />
+    <ClInclude Include="Authentication\SignOut.h" />
+    <ClInclude Include="Authentication\SignOutUI.h" />
+    <ClInclude Include="Authentication\SignUp.h" />
+    <ClInclude Include="Authentication\SignUpUI.h" />
     <ClInclude Include="Entity\Application.h" />
     <ClInclude Include="Entity\ApplicationCollection.h" />
     <ClInclude Include="Entity\CompanyUser.h" />
@@ -160,6 +160,40 @@
     <ClInclude Include="Entity\RecruitmentCollection.h" />
     <ClInclude Include="Entity\User.h" />
     <ClInclude Include="Entity\UserCollection.h" />
+    <ClInclude Include="Recruitment\AddRecruitment.h" />
+    <ClInclude Include="Recruitment\AddRecruitmentUI.h" />
+    <ClInclude Include="Recruitment\RecruitmentInformation.h" />
+    <ClInclude Include="Recruitment\RecruitmentInformationUI.h" />
+    <ClInclude Include="Recruitment\SearchRecruitment.h" />
+    <ClInclude Include="Recruitment\SearchRecruitmentUI.h" />
+    <ClInclude Include="types.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application\AppliationInformationList.cpp" />
+    <ClCompile Include="Application\Apply.cpp" />
+    <ClCompile Include="Authentication\Login.cpp" />
+    <ClCompile Include="Authentication\LoginUI.cpp" />
+    <ClCompile Include="Authentication\LogOutUI.cpp" />
+    <ClCompile Include="Authentication\SignOut.cpp" />
+    <ClCompile Include="Authentication\SignOutUI.cpp" />
+    <ClCompile Include="Authentication\SignUp.cpp" />
+    <ClCompile Include="Authentication\SignUpUI.cpp" />
+    <ClCompile Include="Entity\Application.cpp" />
+    <ClCompile Include="Entity\ApplicationCollection.cpp" />
+    <ClCompile Include="Entity\CompanyUser.cpp" />
+    <ClCompile Include="Entity\CurrentUser.cpp" />
+    <ClCompile Include="Entity\NormalUser.cpp" />
+    <ClCompile Include="Entity\Recruitment.cpp" />
+    <ClCompile Include="Entity\RecruitmentCollection.cpp" />
+    <ClCompile Include="Entity\User.cpp" />
+    <ClCompile Include="Entity\UserCollection.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Recruitment\AddRecruitment.cpp" />
+    <ClCompile Include="Recruitment\AddRecruitmentUI.cpp" />
+    <ClCompile Include="Recruitment\RecruitmentInformation.cpp" />
+    <ClCompile Include="Recruitment\RecruitmentInformationUI.cpp" />
+    <ClCompile Include="Recruitment\SearchRecruitment.cpp" />
+    <ClCompile Include="Recruitment\SearchRecruitmentUI.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -39,38 +39,45 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity\Application.cpp">
-      <Filter>소스 파일\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity\ApplicationCollection.cpp">
-      <Filter>소스 파일\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity\CompanyUser.cpp">
-      <Filter>소스 파일\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity\CurrentUser.cpp">
-      <Filter>소스 파일\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity\NormalUser.cpp">
-      <Filter>소스 파일\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity\Rcruitment.cpp">
-      <Filter>소스 파일\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity\RecruitmentCollection.cpp">
-      <Filter>소스 파일\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity\User.cpp">
-      <Filter>소스 파일\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity\UserCollection.cpp">
-      <Filter>소스 파일\Entity</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="types.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\ApplicationInformationList.h">
+      <Filter>헤더 파일\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\ApplicationInformationListUI.h">
+      <Filter>헤더 파일\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Apply.h">
+      <Filter>헤더 파일\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\ApplyUI.h">
+      <Filter>헤더 파일\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Authentication\Login.h">
+      <Filter>헤더 파일\Authentication</Filter>
+    </ClInclude>
+    <ClInclude Include="Authentication\LoginUI.h">
+      <Filter>헤더 파일\Authentication</Filter>
+    </ClInclude>
+    <ClInclude Include="Authentication\LogOut.h">
+      <Filter>헤더 파일\Authentication</Filter>
+    </ClInclude>
+    <ClInclude Include="Authentication\LogOutUI.h">
+      <Filter>헤더 파일\Authentication</Filter>
+    </ClInclude>
+    <ClInclude Include="Authentication\SignOut.h">
+      <Filter>헤더 파일\Authentication</Filter>
+    </ClInclude>
+    <ClInclude Include="Authentication\SignOutUI.h">
+      <Filter>헤더 파일\Authentication</Filter>
+    </ClInclude>
+    <ClInclude Include="Authentication\SignUp.h">
+      <Filter>헤더 파일\Authentication</Filter>
+    </ClInclude>
+    <ClInclude Include="Authentication\SignUpUI.h">
+      <Filter>헤더 파일\Authentication</Filter>
+    </ClInclude>
     <ClInclude Include="Entity\Application.h">
       <Filter>헤더 파일\Entity</Filter>
     </ClInclude>
@@ -98,5 +105,100 @@
     <ClInclude Include="Entity\UserCollection.h">
       <Filter>헤더 파일\Entity</Filter>
     </ClInclude>
+    <ClInclude Include="Recruitment\AddRecruitment.h">
+      <Filter>헤더 파일\Recruitment</Filter>
+    </ClInclude>
+    <ClInclude Include="Recruitment\AddRecruitmentUI.h">
+      <Filter>헤더 파일\Recruitment</Filter>
+    </ClInclude>
+    <ClInclude Include="Recruitment\RecruitmentInformation.h">
+      <Filter>헤더 파일\Recruitment</Filter>
+    </ClInclude>
+    <ClInclude Include="Recruitment\RecruitmentInformationUI.h">
+      <Filter>헤더 파일\Recruitment</Filter>
+    </ClInclude>
+    <ClInclude Include="Recruitment\SearchRecruitment.h">
+      <Filter>헤더 파일\Recruitment</Filter>
+    </ClInclude>
+    <ClInclude Include="Recruitment\SearchRecruitmentUI.h">
+      <Filter>헤더 파일\Recruitment</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\AppliationInformationList.cpp">
+      <Filter>소스 파일\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Apply.cpp">
+      <Filter>소스 파일\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Authentication\Login.cpp">
+      <Filter>소스 파일\Authentication</Filter>
+    </ClCompile>
+    <ClCompile Include="Authentication\LoginUI.cpp">
+      <Filter>소스 파일\Authentication</Filter>
+    </ClCompile>
+    <ClCompile Include="Authentication\LogOutUI.cpp">
+      <Filter>소스 파일\Authentication</Filter>
+    </ClCompile>
+    <ClCompile Include="Authentication\SignOut.cpp">
+      <Filter>소스 파일\Authentication</Filter>
+    </ClCompile>
+    <ClCompile Include="Authentication\SignOutUI.cpp">
+      <Filter>소스 파일\Authentication</Filter>
+    </ClCompile>
+    <ClCompile Include="Authentication\SignUp.cpp">
+      <Filter>소스 파일\Authentication</Filter>
+    </ClCompile>
+    <ClCompile Include="Authentication\SignUpUI.cpp">
+      <Filter>소스 파일\Authentication</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\Application.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\ApplicationCollection.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\CompanyUser.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\CurrentUser.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\NormalUser.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\Recruitment.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\RecruitmentCollection.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\User.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\UserCollection.cpp">
+      <Filter>소스 파일\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Recruitment\AddRecruitment.cpp">
+      <Filter>소스 파일\Recruitment</Filter>
+    </ClCompile>
+    <ClCompile Include="Recruitment\AddRecruitmentUI.cpp">
+      <Filter>소스 파일\Recruitment</Filter>
+    </ClCompile>
+    <ClCompile Include="Recruitment\RecruitmentInformation.cpp">
+      <Filter>소스 파일\Recruitment</Filter>
+    </ClCompile>
+    <ClCompile Include="Recruitment\RecruitmentInformationUI.cpp">
+      <Filter>소스 파일\Recruitment</Filter>
+    </ClCompile>
+    <ClCompile Include="Recruitment\SearchRecruitment.cpp">
+      <Filter>소스 파일\Recruitment</Filter>
+    </ClCompile>
+    <ClCompile Include="Recruitment\SearchRecruitmentUI.cpp">
+      <Filter>소스 파일\Recruitment</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
