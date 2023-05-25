@@ -6,7 +6,7 @@ extern CurrentUser* currentUser;
 
 string RecruitmentInformation::showRecruitmentList()
 {
-  User *me = currentUser->getCurrentUser();
+  CompanyUser *me = dynamic_cast<CompanyUser*>(currentUser->getCurrentUser());
   RecruitmentCollection *myCollection = me->getOwnedRecruitmentCollection();
   list<Recruitment*> myRecruitment = myCollection->getOwnedRecruitment();
   
