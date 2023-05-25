@@ -5,5 +5,5 @@ using namespace std;
 class LogOut {
 private:
 public:
-	void logoutSubmit();
+	void logoutSubmit(CurrentUser *currentUser);
 };

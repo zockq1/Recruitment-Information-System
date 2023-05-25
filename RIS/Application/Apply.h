@@ -5,5 +5,5 @@ using namespace std;
 class Apply {
 private:
 public:
-	string addApplicant(string businessNumber);
+	string addApplicant(CurrentUser *currentUser, UserCollection * userCollection, string businessNumber);
 };

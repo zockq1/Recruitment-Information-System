@@ -10,13 +10,13 @@ LoginUI::LoginUI(Login *control)
     this->control=control;
 }
 
-void LoginUI::loginSubmit(ifstream *fin, ofstream *fout)
+void LoginUI::loginSubmit(CurrentUser *currentUser, UserCollection *userCollection, ifstream *fin, ofstream *fout)
 {
     string id;
     string password;
 
     *fin >> id >> password;
-    this->control->loginSubmit(id, password);
+    this->control->loginSubmit(currentUser, userCollection, id, password);
 
     *fout << "2.1. 로그인" << endl;
     *fout << "> " << id << " " << password << endl;

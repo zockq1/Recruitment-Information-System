@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "../Entity/CurrentUser.h"
 
 using namespace std;
 
@@ -10,5 +11,5 @@ private:
 	ApplicationInformationList *control;
 public:
 	ApplicationInformationListUI(ApplicationInformationList *control);
-	void showApplicationList(ofstream *fout);
+	void showApplicationList(CurrentUser* currentUser, ofstream *fout);
 };

@@ -7,5 +7,5 @@ using namespace std;
 class ApplicationInformationList {
 private:
 public:
-	string showApplicationList();
+	string showApplicationList(CurrentUser *currentUser);
 };

@@ -9,6 +9,6 @@ class LoginUI{
         Login *control;
     public:
         LoginUI(Login *control);
-        void loginSubmit(ifstream *fin, ofstream *fout);
+        void loginSubmit(CurrentUser *currentUser, UserCollection *userCollection, ifstream *fin, ofstream *fout);
 
 };
