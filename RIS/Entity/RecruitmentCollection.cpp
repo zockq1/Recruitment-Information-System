@@ -6,5 +6,9 @@ list<Recruitment*> RecruitmentCollection::getOwnedRecruitment(){
 
 void RecruitmentCollection::addRecruitment(string companyName, string businessNumber, string job, int numberOfHires, string deadline){
   Recruitment *newRecruitment = new Recruitment(companyName, businessNumber, job, numberOfHires, deadline);
-  ownedRecruitment.push_back(newRecruitment);
+  this->ownedRecruitment.push_back(newRecruitment);
+}
+
+void RecruitmentCollection::addRecruitment(Recruitment *recruitment){
+  this->ownedRecruitment.push_back(recruitment);
 }

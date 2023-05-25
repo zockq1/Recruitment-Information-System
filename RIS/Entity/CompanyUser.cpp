@@ -7,22 +7,18 @@ CompanyUser::CompanyUser(string companyName, string businessNumber, string id, s
     this->setId(id);
     this->setPassword(password);
     this->setUserType(userType);
-    this->ownedRecruitmentCollection = new RecruitmentCollection();
+    this->setCollection();
 }
 
 void CompanyUser::addNewRecruitment(string job, int numberOfHires, string deadline){
 
-    this->ownedRecruitmentCollection->addRecruitment(this->companyName, this->businessNumber, job, numberOfHires, deadline);
+    this->getOwnedRecruitmentCollection()->addRecruitment(this->companyName, this->businessNumber, job, numberOfHires, deadline);
 }
 
-RecruitmentCollection *CompanyUser::getOwnedRecruitmentCollection(){
-    return this->ownedRecruitmentCollection;
-}
-
-string CompanyUser::getBusinessNumber(){
+string CompanyUser::getNumber(){
   return this->businessNumber;
 }
 
-string CompanyUser::getCompanyName(){
+string CompanyUser::getName(){
   return this->companyName;
 }

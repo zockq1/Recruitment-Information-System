@@ -6,13 +6,18 @@ NormalUser::NormalUser(string name, string registrationNumber, string id, string
     this->setId(id);
     this->setPassword(password);
     this->setUserType(userType);
-    this->ownedApplicationCollection = new ApplicationCollection();
+    this->setCollection();
 }
 
-void NormalUser::addNewApplication(string companyName, string businessNumber, string job, int numberOfHires, string deadline){
-    this->ownedApplicationCollection->addApplication(companyName, businessNumber, job, numberOfHires, deadline);
+void NormalUser::addNewRecruitment(Recruitment *recruitment){
+    this->getOwnedRecruitmentCollection()->addRecruitment(recruitment);
 }
 
-ApplicationCollection *NormalUser::getOwnedApplicationCollection(){
-    return this->ownedApplicationCollection;
+
+string NormalUser::getNumber(){
+    return this->registrationNumber;
+}
+
+string NormalUser::getName(){
+    return this->name;
 }

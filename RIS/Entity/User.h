@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include "../types.h"
-#include "ApplicationCollection.h"
+#include "RecruitmentCollection.h"
 using namespace std;
 
 
@@ -11,14 +11,20 @@ private:
   string id;
   string password;
   UserType userType;
+  RecruitmentCollection *ownedRecruitmentCollection;
 
 protected:
   void setId(string id);
   void setPassword(string password);
   void setUserType(UserType userType);
+  void setCollection();
   
 public:
   string getId();
   string getPassword();
   UserType getUserType();
+  RecruitmentCollection *getOwnedRecruitmentCollection();
+  virtual void addNewRecruitment()=0;
+  string getNumber();
+  string getName();
 };
