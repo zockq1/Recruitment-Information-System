@@ -2,43 +2,17 @@
 #include <string>
 #include "SignUp.h"
 #include "SignUpUI.h"
+#include "UserCollection.h"
 using namespace std;
-#pragma once
 
-SignUpUI::SignUpUI(SignUp *control)
+extern UserCollection *userCollection;
+
+void SignUp::signUpNormalUser(string inputName,  string inputRegistrationNumber,  string inputId, string inputPassword)
 {
-    this->control=control;
+    userCollection->signUpNormalUser(inputName, inputRegistrationNumber, inputId, inputPassword);
 }
 
-void SignUpUI::signUpNormalUser(ifstream *fin, ofstream *fout)
+void SignUp::signUpCompanyUser(string inputCompanyName, string inputBusinessNumber, string inputId, string inputPassword )
 {
-    string name;
-    string registrationNumber;
-    string id;
-    string password;
-
-    *fin >> name >> registrationNumber >> id >> password;
-    this->control->signUpNormalUser(name, registrationNumber, id, password);
-    
-    *fout << "1.1. 회원가입 " << endl;
-    *fout << "> " << name << " " << registrationNumber << " " << id << " " << password << endl;
-
-    return;
+    userCollection->signUpCompanylUser(inputCompanyName, inputBusinessNumber, inputId, inputPassword);
 }
-
-void SignUpUI::signUpCompanyUser(ifstream *fin, ofstream *fout)
-{
-    string companyName;
-    string businessNumber;
-    string id;
-    string password;
-    
-    *fin >> companyName >> businessNumber >> id >> password;
-    this->control->signUpCompanyUser(companyName, businessNumber, id, password);
-
-    *fout << "1.1. 회원가입 " << endl;
-    *fout << "> " << companyName << " " << businessNumber << " " << id << " " << password<< endl;
-
-    return;
-    }
-
