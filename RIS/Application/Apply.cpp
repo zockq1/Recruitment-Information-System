@@ -21,7 +21,7 @@ void ApplyUI::apply(CurrentUser *currentUser, UserCollection * userCollection, i
 	string businessNumber;
 	*fin >> businessNumber;
 	string output = this->control->addApplicant(currentUser, userCollection, businessNumber);
-	*fout << "4.2. 채용 지원" << endl ;
+	*fout << "4.2. Job Application" << endl ;
 	*fout << output << endl ;
 }
 

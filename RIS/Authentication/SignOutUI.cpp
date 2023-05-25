@@ -14,7 +14,7 @@ void SignOutUI::deleteAccount(CurrentUser *currentUser, UserCollection *userColl
 {   
     string id = this->control->deleteAccount(currentUser, userCollection);
 
-    *fout << "1.2. 회원탈퇴" << endl;
+    *fout << "1.2. Withdrawal" << endl;
     *fout << "> " << id ;
 
     return;

@@ -15,7 +15,7 @@ void LogOutUI::logoutSubmit(CurrentUser *currentUser, ofstream *fout)
 {
 	string id = this->control->logoutSubmit(currentUser);
     
-	*fout << "2.2. 로그아웃" << endl ;
+	*fout << "2.2. Logout" << endl ;
     *fout << "> " << id << endl ;
 }
 

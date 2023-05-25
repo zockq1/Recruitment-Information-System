@@ -11,8 +11,7 @@ void RecruitmentInformationUI::showRecruitmentList(CurrentUser *currentUser, ofs
 {
   string ouput = this->control->showRecruitmentList(currentUser);
 
-  *fout << "3.2. 등록된 채용 정보 조회" << endl;
-
+  *fout << "3.2. Check Recruitment Posting" << endl;
   *fout << ouput << endl;
 
   return;

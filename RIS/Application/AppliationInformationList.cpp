@@ -20,7 +20,7 @@ ApplicationInformationListUI::ApplicationInformationListUI(ApplicationInformatio
 void ApplicationInformationListUI::showApplicationList(CurrentUser *currentUser, ofstream *fout) 
 {
 	string output = this->control->showApplicationList(currentUser);
-	*fout << "4.3. 지원 정보 조회" << endl << "> ";
+	*fout << "4.3. Check Application Information" << endl << "> ";
     *fout << output << endl ;
 }
 

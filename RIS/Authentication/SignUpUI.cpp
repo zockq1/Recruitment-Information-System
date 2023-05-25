@@ -20,7 +20,7 @@ void SignUpUI::signUpNormalUser(UserCollection *usercollection, ifstream *fin, o
     *fin >> name >> registrationNumber >> id >> password;
     this->control->signUpNormalUser(usercollection, name, registrationNumber, id, password);
     
-    *fout << "1.1. 회원가입 " << endl;
+    *fout << "1.1. Signin " << endl;
     *fout << "> " << name << " " << registrationNumber << " " << id << " " << password << endl;
 
     return;

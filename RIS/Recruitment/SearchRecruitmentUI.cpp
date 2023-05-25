@@ -13,7 +13,7 @@ void SearchRecruitmentUI::search(UserCollection *userCollection, ifstream *fin, 
   *fin >> companyName;
   string output = this->control->search(userCollection, companyName);
 
-  *fout << "4.1 채용 정보 검색" << endl;
+  *fout << "4.1 Search Recruitment Posting" << endl;
   *fout << output << endl;
 
   return;
