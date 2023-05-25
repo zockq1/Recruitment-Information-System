@@ -27,17 +27,20 @@ void UserCollection::deleteAccount(User *me){
 User *UserCollection::findByBusinessNumber(string businessNumber){
     for(auto it = this->users.begin(); it != this->users.end(); it++)
     {
-        if(((CompanyUser*)(*it))->getBusinessNumber() == businessNumber)
+        if((*it)->getUserType() == UserType::COMPANY_USER){
+            if((dynamic_cast<CompanyUser*>(*it))->getNumber() == businessNumber)
             return *it;
+        }
     }
 }
 
 User *UserCollection::findByCompanyName(string companyName){
-    int count = (this->users).size();
     for(auto it = this->users.begin(); it != this->users.end(); it++)
     {
-        if(((CompanyUser*)(*it))->getCompanyName() == companyName)
+        if((*it)->getUserType() == UserType::COMPANY_USER){
+            if((dynamic_cast<CompanyUser*>(*it))->getName() == companyName)
             return *it;
+        }
     }
 }
 

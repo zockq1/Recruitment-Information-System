@@ -32,13 +32,9 @@ string Apply::addApplicant(CurrentUser *currentUser, UserCollection * userCollec
 	RecruitmentCollection *recruitmentCollection = find->getOwnedRecruitmentCollection();
 	list<Recruitment*> rcruit = recruitmentCollection->getOwnedRecruitment();
   
-  	Recruitment *selected;
-  	RecruitmentInfo info;
-	for (auto it = rcruit.begin(); it != rcruit.end(); ++it)
-	{
-		selected = (*it);
-		info = (*it)->getInfo();
-	}
+
+	Recruitment* selected = rcruit.back();//new Recruitment();
+    RecruitmentInfo info = selected->getInfo();
 
 	me->addNewRecruitment(selected);
 

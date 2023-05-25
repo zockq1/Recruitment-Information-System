@@ -7,9 +7,9 @@ RecruitmentInformationUI::RecruitmentInformationUI(RecruitmentInformation *contr
   this->control = control;
 }
 
-void RecruitmentInformationUI::showRecruitmentList(ofstream *fout)
+void RecruitmentInformationUI::showRecruitmentList(CurrentUser *currentUser, ofstream *fout)
 {
-  string ouput = this->control->showRecruitmentList();
+  string ouput = this->control->showRecruitmentList(currentUser);
 
   *fout << "3.2. 등록된 채용 정보 조회" << endl;
 

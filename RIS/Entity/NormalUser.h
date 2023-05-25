@@ -13,4 +13,5 @@ public:
   virtual string getNumber();
   virtual string getName();
   virtual void addNewRecruitment(Recruitment* recruitment);
+  virtual void addNewRecruitment(string job, int numberOfHires, string deadline);
 };

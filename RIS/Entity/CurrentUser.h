@@ -14,6 +14,4 @@ public:
   void deleteCurrentUser();
 };
 
-static CurrentUser* currentUser = new CurrentUser();
-
 #endif

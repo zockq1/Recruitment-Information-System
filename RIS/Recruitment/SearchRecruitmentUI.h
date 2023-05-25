@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 #include "SearchRecruitment.h"
+#include "../Entity/UserCollection.h"
 using namespace std;
 
 class SearchRecruitmentUI {
@@ -9,5 +10,5 @@ class SearchRecruitmentUI {
     SearchRecruitment* control;
   public:
     SearchRecruitmentUI(SearchRecruitment *control);
-    void search(ifstream *fin, ofstream *fout);
+    void search(UserCollection *userCollection, ifstream *fin, ofstream *fout);
 };
