@@ -1,5 +1,5 @@
-#ifndef CURRENTUSER_H
-#define CURRENTUSER_H
+#ifndef USERCOLLECTION_H
+#define USERCOLLECTION_H
 
 #pragma once
 #include <list>
