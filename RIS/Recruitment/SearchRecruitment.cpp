@@ -4,9 +4,8 @@
 
 extern UserCollection* userCollection;
 
-string SearchRecruitment::search(string companyName)
+string SearchRecruitment::search(UserCollection *userCollection, string companyName)
 {
-  //CompanyUser *me = dynamic_cast<CompanyUser*>(currentUser->getCurrentUser());
   CompanyUser *find = dynamic_cast<CompanyUser*>(userCollection->findByCompanyName(companyName));
   RecruitmentCollection *findCollection = find->getOwnedRecruitmentCollection();
   list<Recruitment*> findRecruitment = findCollection->getOwnedRecruitment();

@@ -5,5 +5,5 @@ using namespace std;
 class AddRecruitment {
   private:
   public:
-    void addNewRecruitment(string newJob, int newNumberOfHires, string newDeadline);
+    void addNewRecruitment(CurrentUser *currentUser, string newJob, int newNumberOfHires, string newDeadline);
 };

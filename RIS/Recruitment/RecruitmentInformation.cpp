@@ -2,9 +2,8 @@
 #include "../Entity/CompanyUser.h"
 #include "../Entity/CurrentUser.h"
 
-extern CurrentUser* currentUser;
 
-string RecruitmentInformation::showRecruitmentList()
+string RecruitmentInformation::showRecruitmentList(CurrentUser *currentUser)
 {
   CompanyUser *me = dynamic_cast<CompanyUser*>(currentUser->getCurrentUser());
   RecruitmentCollection *myCollection = me->getOwnedRecruitmentCollection();

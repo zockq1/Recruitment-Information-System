@@ -20,6 +20,9 @@
 #include "./Application/ApplyUI.h"
 #include "./Application/ApplicationInformationList.h"
 #include "./Application/ApplicationInformationListUI.h"
+#include "./Entity/CurrentUser.h"
+#include "./Entity/UserCollection.h"
+
 
 
 
@@ -46,6 +49,9 @@ void doTask()
   locale::global(locale("Korean"));
   ifstream fin("input.txt");
   ofstream fout("output.txt");
+  CurrentUser *currentUser = new CurrentUser();
+  UserCollection *userCollection = new UserCollection();
+
 
   while (!isProgramExit)
   {
@@ -65,9 +71,9 @@ void doTask()
         SignUp *control = new SignUp();
         SignUpUI *boundary = new SignUpUI(control);
         if(userType == 1) { 
-          boundary->signUpNormalUser(&fin, &fout);
+          boundary->signUpNormalUser(userCollection, &fin, &fout);
         } else {
-          boundary->signUpCompanyUser(&fin, &fout);
+          boundary->signUpCompanyUser(userCollection, &fin, &fout);
         }
         break;
       }
@@ -76,7 +82,7 @@ void doTask()
       {
         SignOut *control = new SignOut();
         SignOutUI *boundary = new SignOutUI(control);
-        boundary->deleteAccount(&fout);
+        boundary->deleteAccount(currentUser, userCollection, &fout);
         break;
       }
       }
@@ -92,7 +98,7 @@ void doTask()
       {
         Login *control = new Login();
         LoginUI *boundary = new LoginUI(control);
-        boundary->loginSubmit(&fin, &fout);
+        boundary->loginSubmit(currentUser, userCollection, &fin, &fout);
         break;
       }
       // 2.2. 로그아웃
@@ -100,7 +106,7 @@ void doTask()
       {
         LogOut *control = new LogOut();
         LogOutUI *boundary = new LogOutUI(control);
-        boundary->logoutSubmit(&fout);
+        boundary->logoutSubmit(currentUser, &fout);
         break;
       }
       }
@@ -116,7 +122,7 @@ void doTask()
       {
         AddRecruitment *control = new AddRecruitment();
         AddRecruitmentUI *boundary = new AddRecruitmentUI(control);
-        boundary->addNewRecruitment(&fin, &fout);
+        boundary->addNewRecruitment(currentUser, &fin, &fout);
         break;
       }
       // 3.2. 등록된 채용 정보 조회
@@ -124,7 +130,7 @@ void doTask()
       {
         RecruitmentInformation *control = new RecruitmentInformation();
         RecruitmentInformationUI *boundary = new RecruitmentInformationUI(control);
-        boundary->showRecruitmentList(&fout);
+        boundary->showRecruitmentList(currentUser, &fout);
         break;
       }
       }
@@ -140,7 +146,7 @@ void doTask()
       {
         SearchRecruitment *control = new SearchRecruitment();
         SearchRecruitmentUI *boundary = new SearchRecruitmentUI(control);
-        boundary->search(&fin, &fout);
+        boundary->search(userCollection, &fin, &fout);
         break;
       }
       // 4.2. 채용 지원
@@ -148,7 +154,7 @@ void doTask()
       {
         Apply *control = new Apply();
         ApplyUI *boundary = new ApplyUI(control);
-        boundary->apply(&fin, &fout);
+        boundary->apply(currentUser, userCollection, &fin, &fout);
         break;
       }
       // 4.3. 지원 정보 조회
