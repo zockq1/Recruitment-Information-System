@@ -5,8 +5,6 @@
 #include "ApplicationInformationListUI.h"
 #include "../Entity/CurrentUser.h"
 #include "../Entity/UserCollection.h"
-#include "../Entity/ApplicationCollection.h"
-#include "../Entity/Application.h"
 #include "../Entity/NormalUser.h"
 #include "../types.h"
 

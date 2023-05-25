@@ -9,6 +9,7 @@ private:
   list<Recruitment*> ownedRecruitment;
 public:
   list<Recruitment*> getOwnedRecruitment();
+  void addRecruitment(Recruitment *recruitment);
   void addRecruitment(string companyName, string businessNumber, string job, int numberOfHires, string deadline);
 };
 

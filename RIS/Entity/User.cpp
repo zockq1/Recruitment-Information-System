@@ -23,3 +23,11 @@ void User::setPassword(string password) {
 void User::setUserType(UserType userType) {
 	this->userType = userType;
 }
+
+void User::setCollection(){
+  this->ownedRecruitmentCollection = new RecruitmentCollection();
+}
+
+RecruitmentCollection *User::getOwnedRecruitmentCollection(){
+  return this->ownedRecruitmentCollection;
+}
