@@ -1,7 +1,7 @@
 #include "AddRecruitment.h"
 #include "AddRecruitmentUI.h"
-#include "../Entity/CompanyUser.h"
-#include "../Entity/CurrentUser.h"
+#include "CompanyUser.h"
+#include "CurrentUser.h"
 
 extern CurrentUser* currentUser;
 
