@@ -1,3 +1,6 @@
+#ifndef CURRENTUSER_H
+#define CURRENTUSER_H
+
 #pragma once
 #include <list>
 #include "User.h"
@@ -14,3 +17,7 @@ public:
   User *findByBusinessNumber(string businessNumber);
   User *findByCompanyName(string companyName);
 };
+
+extern UserCollection* userCollection;
+
+#endif
