@@ -2,6 +2,7 @@
 #include "NormalUser.h"
 #include "CompanyUser.h"
 #include "../types.h"
+#include <iostream>
 
 void UserCollection::signUpNormalUser(string inputName, string inputRegistrationNumber, string inputId, string inputPassword){
     UserType userType = UserType::NORMAL_USER;
@@ -28,7 +29,7 @@ User *UserCollection::findByBusinessNumber(string businessNumber){
     for(auto it = this->users.begin(); it != this->users.end(); it++)
     {
         if((*it)->getUserType() == UserType::COMPANY_USER){
-            if((dynamic_cast<CompanyUser*>(*it))->getNumber() == businessNumber)
+            if((*it)->getNumber() == businessNumber)
             return *it;
         }
     }
@@ -38,7 +39,8 @@ User *UserCollection::findByCompanyName(string companyName){
     for(auto it = this->users.begin(); it != this->users.end(); it++)
     {
         if((*it)->getUserType() == UserType::COMPANY_USER){
-            if((dynamic_cast<CompanyUser*>(*it))->getName() == companyName)
+            
+            if((*it)->getName() == companyName)
             return *it;
         }
     }
@@ -48,8 +50,8 @@ User *UserCollection::findByCredential(string id, string password){
     int count = (this->users).size();
     for(auto it = this->users.begin(); it != this->users.end(); it++)
     {
-        if(((CompanyUser*)(*it))->getId() == id)
-            if (((CompanyUser*)(*it))->getPassword() == password)
+        if((*it)->getId() == id)
+            if ((*it)->getPassword() == password)
                 return *it;
     }
 }

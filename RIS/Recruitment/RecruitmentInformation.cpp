@@ -5,7 +5,7 @@
 
 string RecruitmentInformation::showRecruitmentList(CurrentUser *currentUser)
 {
-  CompanyUser *me = dynamic_cast<CompanyUser*>(currentUser->getCurrentUser());
+  User *me = currentUser->getCurrentUser();
   RecruitmentCollection *myCollection = me->getOwnedRecruitmentCollection();
   list<Recruitment*> myRecruitment = myCollection->getOwnedRecruitment();
   

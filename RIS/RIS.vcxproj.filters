@@ -155,12 +155,6 @@
     <ClCompile Include="Authentication\SignUpUI.cpp">
       <Filter>소스 파일\Authentication</Filter>
     </ClCompile>
-    <ClCompile Include="Entity\Application.cpp">
-      <Filter>소스 파일\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity\ApplicationCollection.cpp">
-      <Filter>소스 파일\Entity</Filter>
-    </ClCompile>
     <ClCompile Include="Entity\CompanyUser.cpp">
       <Filter>소스 파일\Entity</Filter>
     </ClCompile>

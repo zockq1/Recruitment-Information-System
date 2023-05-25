@@ -27,8 +27,8 @@ void ApplyUI::apply(CurrentUser *currentUser, UserCollection * userCollection, i
 
 string Apply::addApplicant(CurrentUser *currentUser, UserCollection * userCollection, string businessNumber)
 {
- 	NormalUser *me = dynamic_cast<NormalUser*>(currentUser->getCurrentUser()); //일반회원
-	CompanyUser *find = dynamic_cast<CompanyUser*>(userCollection->findByBusinessNumber(businessNumber)); //회사회원
+ 	User *me = currentUser->getCurrentUser(); //일반회원
+	User *find = userCollection->findByBusinessNumber(businessNumber); //회사회원
 	RecruitmentCollection *recruitmentCollection = find->getOwnedRecruitmentCollection();
 	list<Recruitment*> rcruit = recruitmentCollection->getOwnedRecruitment();
   

@@ -178,8 +178,6 @@
     <ClCompile Include="Authentication\SignOutUI.cpp" />
     <ClCompile Include="Authentication\SignUp.cpp" />
     <ClCompile Include="Authentication\SignUpUI.cpp" />
-    <ClCompile Include="Entity\Application.cpp" />
-    <ClCompile Include="Entity\ApplicationCollection.cpp" />
     <ClCompile Include="Entity\CompanyUser.cpp" />
     <ClCompile Include="Entity\CurrentUser.cpp" />
     <ClCompile Include="Entity\NormalUser.cpp" />

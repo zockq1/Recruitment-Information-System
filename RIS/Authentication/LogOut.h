@@ -1,9 +1,9 @@
 #pragma once
-
+#include "../Entity/CurrentUser.h"
 using namespace std;
 
 class LogOut {
 private:
 public:
-	void logoutSubmit(CurrentUser *currentUser);
+	string logoutSubmit(CurrentUser *currentUser);
 };

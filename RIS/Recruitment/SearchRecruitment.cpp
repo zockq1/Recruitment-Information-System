@@ -2,11 +2,12 @@
 #include "../Entity/UserCollection.h"
 #include "../Entity/CompanyUser.h"
 
-extern UserCollection* userCollection;
+
+#include <iostream>
 
 string SearchRecruitment::search(UserCollection *userCollection, string companyName)
 {
-  CompanyUser *find = dynamic_cast<CompanyUser*>(userCollection->findByCompanyName(companyName));
+  User *find = userCollection->findByCompanyName(companyName);
   RecruitmentCollection *findCollection = find->getOwnedRecruitmentCollection();
   list<Recruitment*> findRecruitment = findCollection->getOwnedRecruitment();
   

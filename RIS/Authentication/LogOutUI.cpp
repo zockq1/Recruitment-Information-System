@@ -13,15 +13,16 @@ LogOutUI::LogOutUI(LogOut *control)
 
 void LogOutUI::logoutSubmit(CurrentUser *currentUser, ofstream *fout) 
 {
-	this->control->logoutSubmit(currentUser);
-    User *me = currentUser->getCurrentUser();
-    string ID = me->getId();
+	string id = this->control->logoutSubmit(currentUser);
+    
 	*fout << "2.2. 로그아웃" << endl ;
-    *fout << "> " << ID << endl ;
+    *fout << "> " << id << endl ;
 }
 
-void LogOut::logoutSubmit(CurrentUser *currentUser)
+string LogOut::logoutSubmit(CurrentUser *currentUser)
 {
+    User* me = currentUser->getCurrentUser();
     currentUser->deleteCurrentUser();
- 	return;
+    string ID = me->getId();
+ 	return ID;
 }

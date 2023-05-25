@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "../Entity/CurrentUser.h"
 
 using namespace std;
 

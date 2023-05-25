@@ -70,7 +70,7 @@ void doTask()
         fin >> userType;
         SignUp *control = new SignUp();
         SignUpUI *boundary = new SignUpUI(control);
-        if(userType == 1) { 
+        if(userType == 2) { 
           boundary->signUpNormalUser(userCollection, &fin, &fout);
         } else {
           boundary->signUpCompanyUser(userCollection, &fin, &fout);

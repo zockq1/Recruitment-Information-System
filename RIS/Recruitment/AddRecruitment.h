@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "../Entity/CurrentUser.h"
 using namespace std;
 
 class AddRecruitment {

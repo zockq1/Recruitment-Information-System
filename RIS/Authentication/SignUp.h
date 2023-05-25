@@ -1,5 +1,6 @@
 ﻿#include <fstream>
 #include <string>
+#include "../Entity/UserCollection.h"
 using namespace std;
 #pragma once
 
