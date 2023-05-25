@@ -5,5 +5,5 @@ using namespace std;
 
 class SignOut{
     public:
-        string deleteAccount();
+        string deleteAccount(CurrentUser *currentUser, UserCollection *userCollection);
 };

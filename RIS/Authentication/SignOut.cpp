@@ -6,10 +6,7 @@
 #include "../Entity/UserCollection.h"
 using namespace std;
 
-extern CurrentUser *currentUser;
-extern UserCollection *userCollection;
-
-string SignOut::deleteAccount()
+string SignOut::deleteAccount(CurrentUser *currentUser, UserCollection *userCollection)
 {
    User *me = currentUser->getCurrentUser();
    string id = me->getId();

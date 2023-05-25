@@ -10,9 +10,9 @@ SignOutUI::SignOutUI(SignOut *control)
     this->control=control;
 }
 
-void SignOutUI::deleteAccount(ofstream *fout)
+void SignOutUI::deleteAccount(CurrentUser *currentUser, UserCollection *userCollection, ofstream *fout)
 {   
-    string id = this->control->deleteAccount();
+    string id = this->control->deleteAccount(currentUser, userCollection);
 
     *fout << "1.2. 회원탈퇴" << endl;
     *fout << "> " << id ;

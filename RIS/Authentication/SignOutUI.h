@@ -1,6 +1,8 @@
 #include <fstream>
 #include <string>
 #include "SignOut.h"
+#include "../Entity/CurrentUser.h"
+#include "../Entity/UserCollection.h"
 using namespace std;
 #pragma once
 
@@ -9,6 +11,6 @@ class SignOutUI{
         SignOut *control;
     public:
         SignOutUI(SignOut *control);
-        void deleteAccount(ofstream *fout);
+        void deleteAccount(CurrentUser *currentUser, UserCollection *userCollection, ofstream *fout);
 
 };
