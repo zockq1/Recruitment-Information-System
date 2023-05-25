@@ -7,5 +7,5 @@ class RecruitmentInformation
 {
   private:
   public:
-    list<string> showRecruitmentList();
+    string showRecruitmentList();
 };

@@ -9,16 +9,11 @@ RecruitmentInformationUI::RecruitmentInformationUI(RecruitmentInformation *contr
 
 void RecruitmentInformationUI::showRecruitmentList(ofstream *fout)
 {
-  list<string> ouputList = this->control->showRecruitmentList();
+  string ouput = this->control->showRecruitmentList();
 
   *fout << "3.2. 등록된 채용 정보 조회" << endl;
 
-  list<string>::iterator iter = ouputList.begin(); 
-  for(iter=ouputList.begin(); iter!=ouputList.end(); iter++) 
-  { 
-    *fout << "> " << *iter << endl;
-  } 
-  *fout << endl;
+  *fout << ouput << endl;
 
   return;
 }
