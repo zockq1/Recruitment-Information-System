@@ -17,3 +17,11 @@ void CompanyUser::addNewRecruitment(string job, int numberOfHires, string deadli
 RecruitmentCollection *CompanyUser::getOwnedRecruitmentCollection(){
     return this->ownedRecruitmentCollection;
 }
+
+string CompanyUser::getBusinessNumber(){
+  return this->businessNumber;
+}
+
+string CompanyUser::getCompanyName(){
+  return this->companyName;
+}
