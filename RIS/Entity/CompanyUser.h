@@ -13,6 +13,6 @@ public:
   CompanyUser(string companyName, string businessNumber,string id, string password, UserType userType);
   virtual string getNumber();
   virtual string getName();
-  virtual void addNewRecruitment(string job, int numberOfHires, string deadline);
+  void addNewRecruitment(string job, int numberOfHires, string deadline);\
 };
 

@@ -12,5 +12,5 @@ public:
   NormalUser(string name, string registrationNumber,string ID, string password, UserType userType);
   virtual string getNumber();
   virtual string getName();
-  virtual void addNewRecruitment(Recruitment* recruitment);
+  void addNewRecruitment(Recruitment* recruitment);
 };
