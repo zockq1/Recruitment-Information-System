@@ -2,6 +2,8 @@
 #include "CompanyUser.h"
 #include "CurrentUser.h"
 
+extern CurrentUser* currentUser;
+
 string RecruitmentInformation::showRecruitmentList()
 {
   CompanyUser *me = (CompanyUser*)(currentUser->getCurrentUser());
