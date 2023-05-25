@@ -2,20 +2,20 @@
 #include <string>
 using namespace std;
 
-struct RecruitmentInfo {
+typedef struct RecruitmentInfo {
   string companyName;
   string job;
   string deadline;
   int numberOfHires;
   string businessNumber;
-};
+} RecruitmentInfo;
 
-struct ApplicationInfo {
+typedef struct ApplicationInfo {
   string companyName;
   string job;
   string deadline;
   int numberOfHires;
-};
+} ApplicationInfo;
 
 
 enum UserType {
