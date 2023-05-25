@@ -10,7 +10,7 @@ private:
 
 public:
   NormalUser(string name, string registrationNumber,string ID, string password, UserType userType);
-  string getNumber();
-  string getName();
-  void addNewRecruitment(Recruitment* recruitment);
+  virtual string getNumber();
+  virtual string getName();
+  virtual void addNewRecruitment(Recruitment* recruitment);
 };

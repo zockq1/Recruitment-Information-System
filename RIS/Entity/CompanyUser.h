@@ -11,8 +11,8 @@ private:
 
 public:
   CompanyUser(string companyName, string businessNumber,string id, string password, UserType userType);
-  string getNumber();
-  string getName();
-  void addNewRecruitment(string job, int numberOfHires, string deadline);
+  virtual string getNumber();
+  virtual string getName();
+  virtual void addNewRecruitment(string job, int numberOfHires, string deadline);
 };
 

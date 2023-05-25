@@ -31,15 +31,17 @@ void ApplyUI::apply(ifstream *fin, ofstream *fout)
 
 string Apply::addApplicant(string businessNumber)
 {
- 	User *me = currentUser->getCurrentUser(); //일반회원
-	CompanyUser *find = userCollection->findByBusinessNumber(businessNumber); //회사회원
+ 	NormalUser *me = dynamic_cast<NormalUser*>(currentUser->getCurrentUser()); //일반회원
+	CompanyUser *find = dynamic_cast<CompanyUser*>(userCollection->findByBusinessNumber(businessNumber)); //회사회원
 	RecruitmentCollection *recruitmentCollection = find->getOwnedRecruitmentCollection();
 	list<Recruitment*> rcruit = recruitmentCollection->getOwnedRecruitment();
   
-  Recruitment selected;
+  Recruitment *selected;
+  RecruitmentInfo info;
 	for (auto it = rcruit.begin(); it != rcruit.end(); ++it)
 	{
 		selected = (*it);
+		info = (*it)->getInfo();
 	}
 
 	me->addNewRecruitment(selected);
