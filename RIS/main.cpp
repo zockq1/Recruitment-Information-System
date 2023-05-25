@@ -192,7 +192,7 @@ void doTask()
 void program_exit()
 {
   ofstream fout("output.txt", ios::app);
-  fout << "6.1. 종료\n";
+  fout << "6.1. Exit\n";
   fout.close();
 
   return;

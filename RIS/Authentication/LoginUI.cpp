@@ -19,7 +19,7 @@ void LoginUI::loginSubmit(CurrentUser *currentUser, UserCollection *userCollecti
     this->control->loginSubmit(currentUser, userCollection, id, password);
 
     *fout << "2.1. Login" << endl;
-    *fout << "> " << id << " " << password << endl;
+    *fout << "> " << id << " " << password << endl << endl;
 
     return;
 }

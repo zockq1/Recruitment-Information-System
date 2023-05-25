@@ -20,8 +20,8 @@ void SignUpUI::signUpNormalUser(UserCollection *usercollection, ifstream *fin, o
     *fin >> name >> registrationNumber >> id >> password;
     this->control->signUpNormalUser(usercollection, name, registrationNumber, id, password);
     
-    *fout << "1.1. Signin " << endl;
-    *fout << "> " << name << " " << registrationNumber << " " << id << " " << password << endl;
+    *fout << "1.1. SignUp" << endl;
+    *fout << "> " << name << " " << registrationNumber << " " << id << " " << password << endl << endl;
 
     return;
 }
@@ -36,8 +36,8 @@ void SignUpUI::signUpCompanyUser(UserCollection *usercollection, ifstream *fin, 
     *fin >> companyName >> businessNumber >> id >> password;
     this->control->signUpCompanyUser(usercollection, companyName, businessNumber, id, password);
 
-    *fout << "1.1. 회원가입 " << endl;
-    *fout << "> " << companyName << " " << businessNumber << " " << id << " " << password<< endl;
+    *fout << "1.1. SignUp"<< endl;
+    *fout << "> " << companyName << " " << businessNumber << " " << id << " " << password << endl << endl;
 
     return;
     }
