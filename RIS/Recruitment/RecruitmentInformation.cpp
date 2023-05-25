@@ -6,10 +6,9 @@ extern CurrentUser* currentUser;
 
 string RecruitmentInformation::showRecruitmentList()
 {
-  CompanyUser *me = (CompanyUser*)(currentUser->getCurrentUser());
+  User *me = currentUser->getCurrentUser();
   RecruitmentCollection *myCollection = me->getOwnedRecruitmentCollection();
   list<Recruitment*> myRecruitment = myCollection->getOwnedRecruitment();
-  int count = myRecruitment.size();
   
   string output;
   for (auto it = myRecruitment.begin(); it != myRecruitment.end(); ++it)

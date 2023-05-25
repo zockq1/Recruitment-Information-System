@@ -7,7 +7,7 @@ extern CurrentUser* currentUser;
 
 void AddRecruitment::addNewRecruitment(string newJob, int newNumberOfHires, string newDeadline)
 {
-  CompanyUser *me = (CompanyUser*)(currentUser->getCurrentUser());
+  User *me = currentUser->getCurrentUser();
 
   me->addNewRecruitment(newJob, newNumberOfHires, newDeadline);
   return;

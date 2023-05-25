@@ -6,10 +6,9 @@ extern UserCollection* userCollection;
 
 string SearchRecruitment::search(string companyName)
 {
-  CompanyUser *find = (CompanyUser*)(userCollection->findByCompanyName(companyName));
+  User *find = userCollection->findByCompanyName(companyName);
   RecruitmentCollection *findCollection = find->getOwnedRecruitmentCollection();
   list<Recruitment*> findRecruitment = findCollection->getOwnedRecruitment();
-  int count = findRecruitment.size();
   
   string output;
   for (auto it = findRecruitment.begin(); it != findRecruitment.end(); ++it)

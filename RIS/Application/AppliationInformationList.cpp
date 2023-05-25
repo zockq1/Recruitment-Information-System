@@ -29,15 +29,15 @@ void ApplicationInformationListUI::showApplicationList(ofstream *fout)
 
 string ApplicationInformationList::showApplicationList()
 {
- 	NormalUser *nUser = (NormalUser*)(currentUser->getCurrentUser());
-    ApplicationCollection *appCollection = nUser->getOwnedApplicationCollection();
+ 	User *me = currentUser->getCurrentUser();
+    RecruitmentCollection *recruitmentCollection = me->getOwnedRecruitmentCollection();
 	
-    list<Application*> ownedApp = appCollection->getOwnedApplication();
+    list<Recruitment*> ownedRecruitment = recruitmentCollection->getOwnedRecruitment();
 
     string output;
 
-    for (auto it = ownedApp.begin(); it != ownedApp.end(); ++it) {
-        ApplicationInfo info = (*it)->getInfo();
+    for (auto it = ownedRecruitment.begin(); it != ownedRecruitment.end(); ++it) {
+        RecruitmentInfo info = (*it)->getInfo();
         output += "> " + info.companyName + " " + info.businessNumber + " " + info.job + " " + to_string(info.numberOfHires) + " " + info.deadline + "\n";
     }
     return output;

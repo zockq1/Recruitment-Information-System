@@ -31,18 +31,18 @@ void ApplyUI::apply(ifstream *fin, ofstream *fout)
 
 string Apply::addApplicant(string businessNumber)
 {
- 	NormalUser *nUser = (NormalUser*)(currentUser->getCurrentUser()); //전역
-	CompanyUser *cUser = (CompanyUser*)(userCollection->findByBusinessNumber(businessNumber)); //전역
-	RecruitmentCollection *rcollection = cUser->getOwnedRecruitmentCollection();
-	list<Recruitment*> rcruit = rcollection->getOwnedRecruitment();
+ 	User *me = currentUser->getCurrentUser(); //일반회원
+	CompanyUser *find = userCollection->findByBusinessNumber(businessNumber); //회사회원
+	RecruitmentCollection *recruitmentCollection = find->getOwnedRecruitmentCollection();
+	list<Recruitment*> rcruit = recruitmentCollection->getOwnedRecruitment();
   
-  	RecruitmentInfo info;
+  Recruitment selected;
 	for (auto it = rcruit.begin(); it != rcruit.end(); ++it)
 	{
-		info = (*it)->getInfo();
+		selected = (*it);
 	}
 
-	nUser->addNewApplication(info.companyName, info.businessNumber, info.job, info.numberOfHires, info.deadline);
+	me->addNewRecruitment(selected);
 
 	string output;
 	output += "> " + info.companyName + " " + info.businessNumber + " " + info.job + "\n";
