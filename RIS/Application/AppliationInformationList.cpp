@@ -3,6 +3,13 @@
 #include <fstream>
 #include "ApplicationInformationList.h"
 #include "ApplicationInformationListUI.h"
+#include "../Entity/CurrentUser.h"
+#include "../Entity/UserCollection.h"
+#include "../Entity/ApplicationCollection.h"
+#include "../Entity/Application.h"
+
+extern CurrentUser* currentUser;
+extern UserCollection* userCollection;
 
 using namespace std;
 
@@ -18,12 +25,12 @@ void ApplicationInformationListUI::showApplicationList(ofstream *fout)
     *fout << output << endl ;
 }
 
-void ApplicationInformationList::showApplicationList()
+string ApplicationInformationList::showApplicationList()
 {
- 	User *nUser = CurrentUser->getCurrentUser();
+ 	User *nUser = currentUser->getCurrentUser();
     ApplicationCollection *appCollection = nUser->getOwnedCollection();
 	
-    Application *ownedApp = appCollection->getOwnedApplication()
+    Application **ownedApp = appCollection->getOwnedApplication();
     int appCount = appCollection->getCount();
 
     string output;
