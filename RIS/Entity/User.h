@@ -12,7 +12,7 @@ private:
   string password;
   UserType userType;
 public:
-  void findUserbyCredential();
   string getId();
+  string getPassword();
   UserType getUserType();
 };
