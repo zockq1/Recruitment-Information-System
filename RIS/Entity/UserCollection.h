@@ -16,6 +16,7 @@ public:
   void deleteAccount();
   User *findByBusinessNumber(string businessNumber);
   User *findByCompanyName(string companyName);
+  User *findByCredential(string id, string password);
 };
 
 extern UserCollection* userCollection;
