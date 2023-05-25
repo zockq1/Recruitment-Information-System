@@ -5,11 +5,10 @@
 #include "LogOutUI.h"
 #include "../Entity/CurrentUser.h"
 #include "../Entity/UserCollection.h"
+using namespace std;
 
 extern CurrentUser* currentUser;
 extern UserCollection* userCollection;
-
-using namespace std;
 
 LogOutUI::LogOutUI(LogOut *control)
 {
