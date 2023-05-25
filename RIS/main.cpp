@@ -162,7 +162,7 @@ void doTask()
       {
         ApplicationInformationList *control = new ApplicationInformationList();
         ApplicationInformationListUI *boundary = new ApplicationInformationListUI(control);
-        boundary->showApplicationList(&fout);
+        boundary->showApplicationList(currentUser, &fout);
         break;
       }
       }
