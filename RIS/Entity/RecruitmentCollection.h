@@ -5,7 +5,7 @@ using namespace std;
 class RecruitmentCollection
 {
 private:
-  list<Recruitment> ownedRecruitment;
+  list<Recruitment*> ownedRecruitment;
 public:
   RecruitmentCollection();
   list<Recruitment*> getOwnedRecruitment();
