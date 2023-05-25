@@ -4,15 +4,15 @@
 
 string RecruitmentInformation::showRecruitmentList()
 {
-  CompanyUser *me = currentUser.getCurrentUser();
+  CompanyUser *me = (CompanyUser*)(currentUser->getCurrentUser());
   RecruitmentCollection *myCollection = me->getOwnedRecruitmentCollection();
-  Recruitment **myRecruitment = myCollection->getOwnedRecruitment();
-  int count = myCollection->getCount();
-
+  list<Recruitment*> myRecruitment = myCollection->getOwnedRecruitment();
+  int count = myRecruitment.size();
+  
   string output;
-  for (int i = 0; i < count; i++)
+  for (auto it = myRecruitment.begin(); it != myRecruitment.end(); ++it)
   {
-    RecruitmentInfo info = myRecruitment[i]->getInfo();
+    RecruitmentInfo info = (*it)->getInfo();
     output += "> " + info.job + " " + to_string(info.numberOfHires) + " " + info.deadline + "\n";
   }
 
